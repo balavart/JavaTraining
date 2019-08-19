@@ -350,8 +350,6 @@ public class ArraySolutions {
             intArr[i] = (int) text[i].toLowerCase().chars().distinct().count();
         }
 
-        //System.out.println(Arrays.toString(intArr)); проверка дополнительного массива
-
         min = intArr[0];
 
         for (int i = 0; i < intArr.length; i++) {
