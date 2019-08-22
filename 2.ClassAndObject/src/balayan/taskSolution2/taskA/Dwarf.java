@@ -1,33 +1,61 @@
 package balayan.taskSolution2.taskA;
 
 /**
- * this is a POJO class.
+ * this is a POJO class
  * for encapsulation are used private fields, getters and setters
  * the important methods of the Object class are also overridden
  * this class also implements Comparable and overrides "compareTo"
+ *
+ * @author Balayan Vardan
+ * @version 1.8
+ * is created on 8/22/2019
  */
-
 public class Dwarf implements Comparable {
     private String personName = null;
     private int strenghtLevel = 0;
 
+    /**
+     * Dwarf constructor
+     * @param personName
+     * @param strenghtLevel
+     */
     public Dwarf(String personName, int strenghtLevel) {
         this.personName = personName;
         this.strenghtLevel = strenghtLevel;
     }
 
+    /**
+     * getter for strenghtLevel
+     *
+     * @return strenghtLevel
+     */
     public int getStrenghtLevel() {
         return strenghtLevel;
     }
 
+    /**
+     * setter for strenghtLevel
+     *
+     * @param strenghtLevel
+     */
     public void setStrenghtLevel(int strenghtLevel) {
         this.strenghtLevel = strenghtLevel;
     }
 
+    /**
+     * getter for personName
+     *
+     * @return personName
+     */
     public String getPersonName() {
         return personName;
     }
 
+    /**
+     * setter for personName
+     *
+     * @param personName
+     */
     public void setPersonName(String personName) {
         this.personName = personName;
     }

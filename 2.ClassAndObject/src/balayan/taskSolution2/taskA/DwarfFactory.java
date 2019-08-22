@@ -7,11 +7,19 @@ import java.util.*;
  * this is a Factory class
  * this class is used as an additional class for creating POJO class objects
  * main logic is in here
+ *
+ * @author Balayan Vardan
+ * @version 1.8
+ * @see Dwarf
+ * is created on 8/22/2019
  */
-
 public class DwarfFactory {
 
-    /** method creates an array of objects and assigns values​from Enum */
+    /**
+     * method creates an array of objects and assigns values​from Enum
+     *
+     * @return dwarf object array
+     */
     Dwarf[] addDwarfArr() {
         Dwarf[] dwarfArr = new Dwarf[5];
         dwarfArr[0] = new Dwarf(DwarfClasses.PALADIN.personName, DwarfClasses.PALADIN.strenghtLevel);
@@ -46,7 +54,12 @@ public class DwarfFactory {
 
     }
 
-    /** method takes as an parameter an array and returns the number of equivalent array objects */
+    /**
+     * method takes as an parameter an array
+     *
+     * @param dwarves - object array
+     * @return newDwarfArr.length - the number of equivalent array objects
+     */
     int quivalentObjNum(Dwarf[] dwarves) {
         TreeSet<Dwarf> dwarfTreeSet = new TreeSet<>();
         Dwarf[] newDwarfArr = null;
@@ -83,7 +96,11 @@ public class DwarfFactory {
         return newDwarfArr.length;
     }
 
-    /** method takes as an parameter an array and display a string representation of objects */
+    /**
+     * method takes as an parameter an array and display a string representation of objects
+     *
+     * @param dwarves - object array
+     */
     void objDisplay(Dwarf[] dwarves) {
         System.out.println("Array objects: ");
         for (Dwarf temp : dwarves) {

@@ -7,23 +7,25 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 /**
- * @author Balayan Vardan
+ * this is main starting app class
  * this app is a solution for EPAM Java Training homework № 1
+ *
+ * @author Balayan Vardan
+ * @version 1.8
  * is created on 8/18/2019
  */
-
-public class ArraySolutions {
+public class StartTaskSolution1 {
     private static int[] primaryArray;
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static int countStr = 0;
 
     public static void main(String[] args) {
-        ArraySolutions solution = new ArraySolutions();
+        StartTaskSolution1 solution = new StartTaskSolution1();
         solution.startApp();
     }
 
     /**
-     * method starting all other app methods
+     * method starting other app methods
      */
     void startApp() {
         addArray();
@@ -59,6 +61,8 @@ public class ArraySolutions {
     /**
      * method in integers array swaps the maximum negative element and the minimum positive
      * this method is a solution for task option № 1.1
+     *
+     * @param array
      */
     void switchElements(int[] array) {
         int minPosElement = 0;
@@ -100,6 +104,8 @@ public class ArraySolutions {
     /**
      * method in integers array determines sum of elements of even positions
      * this method is a solution for task option № 1.2
+     *
+     * @param array
      */
     void sumElements(int[] array) {
         int sum = 0;
@@ -116,6 +122,8 @@ public class ArraySolutions {
     /**
      * method in integers array zeroing negative elements
      * this method is a solution for task option № 1.3
+     *
+     * @param array
      */
     void zeroReplace(int[] array) {
 
@@ -131,6 +139,8 @@ public class ArraySolutions {
     /**
      * method in integers array tripling positive element in front of a negative element
      * this method is a solution for task option № 1.4
+     *
+     * @param array
      */
     void tripleElements(int[] array) {
 
@@ -148,6 +158,8 @@ public class ArraySolutions {
     /**
      * method in integers array find The difference between the minimum element value and the arithmetic mean value
      * this method is a solution for task option № 1.5
+     *
+     * @param array
      */
     void differenceFind(int[] array) {
         double average = 0;
@@ -172,6 +184,8 @@ public class ArraySolutions {
     /**
      * method in integers array repeat array numbers of odd indices
      * this method is a solution for task option № 1.6
+     *
+     * @param array
      */
     void repeatElements(int[] array) {
 
@@ -192,6 +206,8 @@ public class ArraySolutions {
     /**
      * method for assigning string counts
      * some methods use this method
+     *
+     * @see StartTaskSolution1#isDigit(java.lang.String)
      */
     void inputStrCount() {
         boolean digit = false;
@@ -234,6 +250,8 @@ public class ArraySolutions {
     /**
      * method finds the shortest and longest strings and displays this strings and their length
      * this method is a solution for task option № 2.1
+     *
+     * @see StartTaskSolution1#inputStrCount()
      */
     void shortLongLengthFind() {
         String shortStr = null;
@@ -264,6 +282,8 @@ public class ArraySolutions {
     /**
      * method displays strings whose length is longer the average and their length
      * this method is a solution for task option № 2.2
+     *
+     * @see StartTaskSolution1#inputStrCount()
      */
     void averageLonger() {
         int average = 0;
@@ -297,6 +317,8 @@ public class ArraySolutions {
     /**
      * method displays strings whose length is shorter the average and their length
      * this method is a solution for task option № 2.3
+     *
+     * @see StartTaskSolution1#inputStrCount()
      */
     void averageShorter() {
         int average = 0;
@@ -330,6 +352,8 @@ public class ArraySolutions {
     /**
      * method find the first specified word the number of different characters is minimal
      * this method is a solution for task option № 2.4
+     *
+     * @see StartTaskSolution1#inputStrCount()
      */
     void minCharCountFind() {
         inputStrCount();
@@ -373,6 +397,8 @@ public class ArraySolutions {
     /**
      * method find the first specified word consisting various characters
      * this method is a solution for task option № 2.5
+     *
+     * @see StartTaskSolution1#inputStrCount()
      */
     void differentChars() {
         inputStrCount();
@@ -402,6 +428,8 @@ public class ArraySolutions {
     /**
      * method find the specified word, consisting  of numbers only or the second word after the first counter
      * this method is a solution for task option № 2.6
+     *
+     * @see StartTaskSolution1#inputStrCount()
      */
     void onlyDigitsFind() {
         inputStrCount();
