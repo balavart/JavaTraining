@@ -1,11 +1,13 @@
-package balayan.taskSolution2.taskA;
+package balayan.taskSolution2.taskA.factory;
 
+
+import balayan.taskSolution2.taskA.Dwarf;
 
 import java.util.*;
 
 /**
  * this is a Factory class
- * this class is used as an additional class for creating POJO class objects
+ * is used as an additional class for creating POJO class objects
  * main logic is in here
  *
  * @author Balayan Vardan
@@ -20,7 +22,7 @@ public class DwarfFactory {
      *
      * @return dwarf object array
      */
-    Dwarf[] addDwarfArr() {
+    public Dwarf[] addDwarfArr() {
         Dwarf[] dwarfArr = new Dwarf[5];
         dwarfArr[0] = new Dwarf(DwarfClasses.PALADIN.personName, DwarfClasses.PALADIN.strenghtLevel);
         dwarfArr[1] = new Dwarf(DwarfClasses.WARRIOR.personName, DwarfClasses.WARRIOR.strenghtLevel);
@@ -35,7 +37,7 @@ public class DwarfFactory {
      * this inner Enum contains 5 objects with random field values
      * generates a random field numbers and selects random string values
      */
-    public enum DwarfClasses {
+    enum DwarfClasses {
         PALADIN((int) (Math.random() * 5)),
         WARRIOR((int) (Math.random() * 5)),
         HUNTER((int) (Math.random() * 5)),
@@ -60,7 +62,7 @@ public class DwarfFactory {
      * @param dwarves - object array
      * @return newDwarfArr.length - the number of equivalent array objects
      */
-    int quivalentObjNum(Dwarf[] dwarves) {
+    public int quivalentObjNum(Dwarf[] dwarves) {
         TreeSet<Dwarf> dwarfTreeSet = new TreeSet<>();
         Dwarf[] newDwarfArr = null;
 
@@ -101,7 +103,7 @@ public class DwarfFactory {
      *
      * @param dwarves - object array
      */
-    void objDisplay(Dwarf[] dwarves) {
+    public void objDisplay(Dwarf[] dwarves) {
         System.out.println("Array objects: ");
         for (Dwarf temp : dwarves) {
             System.out.println(temp);

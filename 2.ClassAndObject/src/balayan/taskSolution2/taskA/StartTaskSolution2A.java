@@ -1,5 +1,7 @@
 package balayan.taskSolution2.taskA;
 
+import balayan.taskSolution2.taskA.factory.DwarfFactory;
+
 /**
  * this app is a solution for EPAM Java Training homework № 2, task A
  * this is main starting app class
@@ -8,7 +10,7 @@ package balayan.taskSolution2.taskA;
  * @version 1.8
  * is created on 8/22/2019
  */
-public class StartTaskSolution2A {
+class StartTaskSolution2A {
     public static void main(String[] args) {
         StartTaskSolution2A taskSolution2A = new StartTaskSolution2A();
         taskSolution2A.startApp();

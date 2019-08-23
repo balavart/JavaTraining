@@ -3,7 +3,7 @@ package balayan.taskSolution2.taskA;
 /**
  * this is a POJO class
  * for encapsulation are used private fields, getters and setters
- * the important methods of the Object class are also overridden
+ * some Object methods are also overridden
  * this class also implements Comparable and overrides "compareTo"
  *
  * @author Balayan Vardan
@@ -16,6 +16,7 @@ public class Dwarf implements Comparable {
 
     /**
      * Dwarf constructor
+     *
      * @param personName
      * @param strenghtLevel
      */
@@ -29,7 +30,7 @@ public class Dwarf implements Comparable {
      *
      * @return strenghtLevel
      */
-    public int getStrenghtLevel() {
+    int getStrenghtLevel() {
         return strenghtLevel;
     }
 
@@ -38,7 +39,7 @@ public class Dwarf implements Comparable {
      *
      * @param strenghtLevel
      */
-    public void setStrenghtLevel(int strenghtLevel) {
+    void setStrenghtLevel(int strenghtLevel) {
         this.strenghtLevel = strenghtLevel;
     }
 
@@ -47,7 +48,7 @@ public class Dwarf implements Comparable {
      *
      * @return personName
      */
-    public String getPersonName() {
+    String getPersonName() {
         return personName;
     }
 
@@ -56,15 +57,26 @@ public class Dwarf implements Comparable {
      *
      * @param personName
      */
-    public void setPersonName(String personName) {
+    void setPersonName(String personName) {
         this.personName = personName;
     }
 
+    /**
+     * overriding Object method
+     *
+     * @return class fields
+     */
     @Override
     public String toString() {
         return "Dwarf name: " + getPersonName() + ", Strenght level: " + getStrenghtLevel();
     }
 
+    /**
+     * overriding Object method for more accurate objects comparison
+     *
+     * @param obj
+     * @return logical comparison
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -86,6 +98,11 @@ public class Dwarf implements Comparable {
         return true;
     }
 
+    /**
+     * overriding Object method for more accurate objects comparison
+     *
+     * @return logical comparison
+     */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -95,6 +112,11 @@ public class Dwarf implements Comparable {
         return result;
     }
 
+    /**
+     * overriding Comparable method for more accurate objects comparison
+     *
+     * @return logical comparison
+     */
     @Override
     public int compareTo(Object o) {
         if (this.equals(o)) {

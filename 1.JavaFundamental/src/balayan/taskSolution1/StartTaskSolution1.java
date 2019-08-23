@@ -46,7 +46,7 @@ public class StartTaskSolution1 {
 
     /**
      * method creates an array with random elements from -10 to 10
-     * this method is a solution for task option № 1
+     * is a solution for task option № 1
      */
     void addArray() {
         primaryArray = new int[20];
@@ -60,7 +60,7 @@ public class StartTaskSolution1 {
 
     /**
      * method in integers array swaps the maximum negative element and the minimum positive
-     * this method is a solution for task option № 1.1
+     * is a solution for task option № 1.1
      *
      * @param array
      */
@@ -103,7 +103,7 @@ public class StartTaskSolution1 {
 
     /**
      * method in integers array determines sum of elements of even positions
-     * this method is a solution for task option № 1.2
+     * is a solution for task option № 1.2
      *
      * @param array
      */
@@ -121,7 +121,7 @@ public class StartTaskSolution1 {
 
     /**
      * method in integers array zeroing negative elements
-     * this method is a solution for task option № 1.3
+     * is a solution for task option № 1.3
      *
      * @param array
      */
@@ -138,7 +138,7 @@ public class StartTaskSolution1 {
 
     /**
      * method in integers array tripling positive element in front of a negative element
-     * this method is a solution for task option № 1.4
+     * is a solution for task option № 1.4
      *
      * @param array
      */
@@ -157,7 +157,7 @@ public class StartTaskSolution1 {
 
     /**
      * method in integers array find The difference between the minimum element value and the arithmetic mean value
-     * this method is a solution for task option № 1.5
+     * is a solution for task option № 1.5
      *
      * @param array
      */
@@ -183,7 +183,7 @@ public class StartTaskSolution1 {
 
     /**
      * method in integers array repeat array numbers of odd indices
-     * this method is a solution for task option № 1.6
+     * is a solution for task option № 1.6
      *
      * @param array
      */
@@ -249,7 +249,7 @@ public class StartTaskSolution1 {
 
     /**
      * method finds the shortest and longest strings and displays this strings and their length
-     * this method is a solution for task option № 2.1
+     * is a solution for task option № 2.1
      *
      * @see StartTaskSolution1#inputStrCount()
      */
@@ -281,7 +281,7 @@ public class StartTaskSolution1 {
 
     /**
      * method displays strings whose length is longer the average and their length
-     * this method is a solution for task option № 2.2
+     * is a solution for task option № 2.2
      *
      * @see StartTaskSolution1#inputStrCount()
      */
@@ -316,7 +316,7 @@ public class StartTaskSolution1 {
 
     /**
      * method displays strings whose length is shorter the average and their length
-     * this method is a solution for task option № 2.3
+     * is a solution for task option № 2.3
      *
      * @see StartTaskSolution1#inputStrCount()
      */
@@ -351,7 +351,7 @@ public class StartTaskSolution1 {
 
     /**
      * method find the first specified word the number of different characters is minimal
-     * this method is a solution for task option № 2.4
+     * is a solution for task option № 2.4
      *
      * @see StartTaskSolution1#inputStrCount()
      */
@@ -396,7 +396,7 @@ public class StartTaskSolution1 {
 
     /**
      * method find the first specified word consisting various characters
-     * this method is a solution for task option № 2.5
+     * is a solution for task option № 2.5
      *
      * @see StartTaskSolution1#inputStrCount()
      */
@@ -427,7 +427,7 @@ public class StartTaskSolution1 {
 
     /**
      * method find the specified word, consisting  of numbers only or the second word after the first counter
-     * this method is a solution for task option № 2.6
+     * is a solution for task option № 2.6
      *
      * @see StartTaskSolution1#inputStrCount()
      */
