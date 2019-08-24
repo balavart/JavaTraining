@@ -55,7 +55,7 @@ public class StartTaskSolution1 {
             primaryArray[i] = (int) (Math.random() * (20 + 1)) - 10;
         }
 
-        System.out.println("Array with random elements -10 to 10: " + "\n" + Arrays.toString(primaryArray) + "\n");
+        System.out.println("An array with random elements -10 to 10: " + "\n" + Arrays.toString(primaryArray) + "\n");
     }
 
     /**
@@ -239,7 +239,7 @@ public class StartTaskSolution1 {
 
         for (int i = 0; i < string.length(); i++) {
             if (!Character.isDigit(string.charAt(i)) || string.equals("0")) {
-                System.err.println("Type number!");
+                System.err.println("Type a number!");
                 return false;
             }
 
@@ -261,7 +261,7 @@ public class StartTaskSolution1 {
         inputStrCount();
 
         for (int i = 0; i < countStr; i++) {
-            System.out.println("Type string: " + (i + 1));
+            System.out.println("Type a string: " + (i + 1));
             try {
                 text = reader.readLine();
             } catch (IOException e) {
@@ -275,7 +275,7 @@ public class StartTaskSolution1 {
             }
         }
         System.out.println("The shortest string: " + "\"" + shortStr + "\"" + ". Its length: " + shortStr.length());
-        System.out.println("Longest string: " + "\"" + longStr + "\"" + ". Its length: " + longStr.length());
+        System.out.println("The longest string: " + "\"" + longStr + "\"" + ". Its length: " + longStr.length());
         System.out.print("\n");
     }
 
@@ -291,7 +291,7 @@ public class StartTaskSolution1 {
         String[] text = new String[countStr];
 
         for (int i = 0; i < countStr; i++) {
-            System.out.println("Type string: " + (i + 1));
+            System.out.println("Type a string: " + (i + 1));
             try {
                 text[i] = reader.readLine();
                 average += text[i].length();
@@ -301,13 +301,13 @@ public class StartTaskSolution1 {
         }
         average /= countStr;
 
-        System.out.print("Strings longer than average: " + "\n");
+        System.out.print("Strings longer than an average: " + "\n");
 
         for (int i = 0; i < countStr; i++) {
             if (text[i].length() > average) {
-                System.out.println("\"" + text[i] + "\"" + " - This string length: " + text[i].length());
+                System.out.println("\"" + text[i] + "\"" + " - This string's length: " + text[i].length());
             } else {
-                System.out.println("String lengts are equal");
+                System.out.println("The strings' lengts are equal");
                 break;
             }
         }
@@ -326,7 +326,7 @@ public class StartTaskSolution1 {
         String[] text = new String[countStr];
 
         for (int i = 0; i < countStr; i++) {
-            System.out.println("Type string: " + (i + 1));
+            System.out.println("Type a string: " + (i + 1));
             try {
                 text[i] = reader.readLine();
                 average += text[i].length();
@@ -336,13 +336,13 @@ public class StartTaskSolution1 {
         }
         average /= countStr;
 
-        System.out.print("Strings shorter than average: " + "\n");
+        System.out.print("Strings shorter than an average: " + "\n");
 
         for (int i = 0; i < countStr; i++) {
             if (text[i].length() < average) {
-                System.out.println("\"" + text[i] + "\"" + " - This string length: " + text[i].length());
+                System.out.println("\"" + text[i] + "\"" + " - This string's length: " + text[i].length());
             } else {
-                System.out.println("String lengts are equal");
+                System.out.println("The strings' lengts are equal");
                 break;
             }
         }
@@ -384,10 +384,10 @@ public class StartTaskSolution1 {
 
         for (int i = 0; i < text.length; i++) {
             if (text[i].toLowerCase().chars().distinct().count() == min) {
-                System.out.println("The first specified word the number of different characters is minimal: " + "\"" + text[i] + "\"");
+                System.out.println("The first specified word with the minimal number of different characters: " + "\"" + text[i] + "\"");
                 break;
             } else {
-                System.out.println("String lengts are equal");
+                System.out.println("The strings' lengts are equal");
                 break;
             }
         }
@@ -458,7 +458,7 @@ public class StartTaskSolution1 {
 
         for (int i = 0; i < text.length; i++) {
             if (text[i].equals(strArr[i])) {
-                System.out.println("The specified word, consisting  of numbers only or the second word after the first counter: " + "\"" + text[i] + "\"");
+                System.out.println("The specified word consisting of numbers only or the second word after the first counter: " + "\"" + text[i] + "\"");
                 break;
             } else {
                 System.out.println("Words consisting numbers only are missing");

@@ -89,7 +89,7 @@ public class GunFactory {
     public void displayShootableArrArr() {
         Shootable[] displayArr = addShootableArr();
         Shootable[][] displayArrArr = addShootableArrArr(displayArr);
-        System.out.println("One-dimensional object array: " + Arrays.toString(displayArr));
-        System.out.println("Two-dimensional object array: " + Arrays.deepToString(displayArrArr));
+        System.out.println("The one-dimensional object array: " + Arrays.toString(displayArr));
+        System.out.println("The two-dimensional object array: " + Arrays.deepToString(displayArrArr));
     }
 }

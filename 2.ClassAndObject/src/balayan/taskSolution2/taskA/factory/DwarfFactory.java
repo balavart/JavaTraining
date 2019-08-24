@@ -24,11 +24,11 @@ public class DwarfFactory {
      */
     public Dwarf[] addDwarfArr() {
         Dwarf[] dwarfArr = new Dwarf[5];
-        dwarfArr[0] = new Dwarf(DwarfClasses.PALADIN.personName, DwarfClasses.PALADIN.strenghtLevel);
-        dwarfArr[1] = new Dwarf(DwarfClasses.WARRIOR.personName, DwarfClasses.WARRIOR.strenghtLevel);
-        dwarfArr[2] = new Dwarf(DwarfClasses.HUNTER.personName, DwarfClasses.HUNTER.strenghtLevel);
-        dwarfArr[3] = new Dwarf(DwarfClasses.ROGUE.personName, DwarfClasses.ROGUE.strenghtLevel);
-        dwarfArr[4] = new Dwarf(DwarfClasses.MONK.personName, DwarfClasses.MONK.strenghtLevel);
+        dwarfArr[0] = new Dwarf(DwarfClasses.PALADIN.personName, DwarfClasses.PALADIN.strengthLevel);
+        dwarfArr[1] = new Dwarf(DwarfClasses.WARRIOR.personName, DwarfClasses.WARRIOR.strengthLevel);
+        dwarfArr[2] = new Dwarf(DwarfClasses.HUNTER.personName, DwarfClasses.HUNTER.strengthLevel);
+        dwarfArr[3] = new Dwarf(DwarfClasses.ROGUE.personName, DwarfClasses.ROGUE.strengthLevel);
+        dwarfArr[4] = new Dwarf(DwarfClasses.MONK.personName, DwarfClasses.MONK.strengthLevel);
 
         return dwarfArr;
     }
@@ -45,13 +45,13 @@ public class DwarfFactory {
         MONK((int) (Math.random() * 5));
 
         String personName = null;
-        int strenghtLevel = 0;
+        int strengthLevel = 0;
 
         String[] names = {"Vardvin", "Muradin Bronzebeard", "Falstad Wildhammer", "Brymidaine Zecker", "Thargas Anvilmar"};
 
-        DwarfClasses(int strenghtLevel) {
+        DwarfClasses(int strengthLevel) {
             this.personName = names[(new Random().nextInt(names.length))];
-            this.strenghtLevel = strenghtLevel;
+            this.strengthLevel = strengthLevel;
         }
 
     }
@@ -84,7 +84,7 @@ public class DwarfFactory {
             }
         }
 
-        System.out.println("Array repeating objects: ");
+        System.out.println("The array of repeating objects: ");
         if (newDwarfArr.length != 0) {
             for (int i = 0; i < newDwarfArr.length; i++) {
                 System.out.println("\"" + newDwarfArr[i] + "\"");
@@ -93,7 +93,7 @@ public class DwarfFactory {
             System.out.println("No objects exist");
         }
 
-        System.out.println("Array equivalent objects number: " + newDwarfArr.length);
+        System.out.println("The number of equivalent objects: " + newDwarfArr.length);
 
         return newDwarfArr.length;
     }
@@ -104,7 +104,7 @@ public class DwarfFactory {
      * @param dwarves - object array
      */
     public void objDisplay(Dwarf[] dwarves) {
-        System.out.println("Array objects: ");
+        System.out.println("The array of objects: ");
         for (Dwarf temp : dwarves) {
             System.out.println(temp);
         }

@@ -12,35 +12,35 @@ package balayan.taskSolution2.taskA;
  */
 public class Dwarf implements Comparable {
     private String personName = null;
-    private int strenghtLevel = 0;
+    private int strengthLevel = 0;
 
     /**
      * Dwarf constructor
      *
      * @param personName
-     * @param strenghtLevel
+     * @param strengthLevel
      */
-    public Dwarf(String personName, int strenghtLevel) {
+    public Dwarf(String personName, int strengthLevel) {
         this.personName = personName;
-        this.strenghtLevel = strenghtLevel;
+        this.strengthLevel = strengthLevel;
     }
 
     /**
-     * getter for strenghtLevel
+     * getter for strengthLevel
      *
-     * @return strenghtLevel
+     * @return strengthLevel
      */
-    int getStrenghtLevel() {
-        return strenghtLevel;
+    int getStrengthLevel() {
+        return strengthLevel;
     }
 
     /**
-     * setter for strenghtLevel
+     * setter for strengthLevel
      *
-     * @param strenghtLevel
+     * @param strengthLevel
      */
-    void setStrenghtLevel(int strenghtLevel) {
-        this.strenghtLevel = strenghtLevel;
+    void setStrengthLevel(int strengthLevel) {
+        this.strengthLevel = strengthLevel;
     }
 
     /**
@@ -68,7 +68,7 @@ public class Dwarf implements Comparable {
      */
     @Override
     public String toString() {
-        return "Dwarf name: " + getPersonName() + ", Strenght level: " + getStrenghtLevel();
+        return "Dwarf name: " + getPersonName() + ", Strength level: " + getStrengthLevel();
     }
 
     /**
@@ -92,7 +92,7 @@ public class Dwarf implements Comparable {
         if (getPersonName() != other.getPersonName()) {
             return false;
         }
-        if (getStrenghtLevel() != other.getStrenghtLevel()) {
+        if (getStrengthLevel() != other.getStrengthLevel()) {
             return false;
         }
         return true;
@@ -107,7 +107,7 @@ public class Dwarf implements Comparable {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + getStrenghtLevel();
+        result = prime * result + getStrengthLevel();
         result = prime * result + ((getPersonName() == null) ? 0 : getPersonName().hashCode());
         return result;
     }
