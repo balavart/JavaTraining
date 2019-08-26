@@ -15,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -36,6 +37,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="balayan.taskSolution3_5" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -48,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StartTaskSolution2B">
+  <component name="RunManager" selected="Application.StartTaskSolution3_5">
     <configuration name="StartTaskSolution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="balayan.taskSolution1.StartTaskSolution1" />
       <module name="1.JavaFundamental" />
@@ -88,8 +94,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StartTaskSolution3_5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="balayan.taskSolution3_5.StartTaskSolution3_5" />
+      <module name="3.OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="balayan.taskSolution3_5.contract.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StartTaskSolution3_5" />
         <item itemvalue="Application.StartTaskSolution2B" />
         <item itemvalue="Application.StartTaskSolution2A" />
         <item itemvalue="Application.StartTaskSolution1" />

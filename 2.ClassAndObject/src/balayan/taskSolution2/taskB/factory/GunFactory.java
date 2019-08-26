@@ -22,7 +22,7 @@ public class GunFactory {
     /**
      * method add an randomly filled object array
      *
-     * @return
+     * @return guns
      */
     public Shootable[] addShootableArr() {
         Shootable[] guns = new Shootable[(5 + (int) (Math.random() * ((10 - 5) + 1)))];
