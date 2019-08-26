@@ -35,7 +35,7 @@ public class WorkClass {
 
     /**
      * @return the generated object for wrapper class
-     * @see TaxiStation#addStation()
+     * @see TaxiStation
      */
     static PassengerCar getCar() {
         PassengerCar car = null;
@@ -72,6 +72,21 @@ public class WorkClass {
         }
 
         return car;
+    }
+
+    /**
+     * method add an randomly filled object array
+     * use static method to fill an array
+     *
+     * @return array of cars
+     * @see WorkClass#getCar()
+     */
+    static PassengerCar[] getCollectedСars() {
+        PassengerCar[] tempArr = new PassengerCar[20];
+        for (int i = 0; i < tempArr.length; i++) {
+            tempArr[i] = getCar();
+        }
+        return tempArr;
     }
 
     /**
@@ -416,7 +431,7 @@ public class WorkClass {
         System.out.println(carNumAvaible + " cars available" + "\n");
         carNumAvaible = 0;
 
-        System.out.println("Car sorted list: ");
+        System.out.println("Car sorted list by fuel consumption: ");
         sortCars(station);
         for (PassengerCar cars : station) {
             System.out.println(cars);

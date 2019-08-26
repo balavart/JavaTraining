@@ -21,6 +21,6 @@ class StartTaskSolution3_5 {
     void startApp() {
         TaxiStation station = new TaxiStation();
         WorkClass workClass = new WorkClass();
-        workClass.display(station.addStation());
+        workClass.display(station.getStation());
     }
 }

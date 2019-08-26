@@ -14,7 +14,7 @@ import balayan.taskSolution3_5.сarСlassification.sedan.ToyotaCorolla;
 
 /**
  * this is object array wrapper class
- * this class is used for creating car objects
+ * this class is used for storage car objects
  *
  * @author Balayan Vardan
  * @version 1.8
@@ -30,21 +30,9 @@ import balayan.taskSolution3_5.сarСlassification.sedan.ToyotaCorolla;
  * is created on 8/26/2019
  */
 public class TaxiStation {
+    private PassengerCar[] station = WorkClass.getCollectedСars();
 
-    /**
-     * method add an randomly filled object array
-     * uses static method from work class
-     *
-     * @return car objects
-     * @see WorkClass
-     */
-    PassengerCar[] addStation() {
-        PassengerCar[] station = new PassengerCar[20];
-
-        for (int i = 0; i < station.length; i++) {
-            station[i] = WorkClass.getCar();
-        }
-
+    public PassengerCar[] getStation() {
         return station;
     }
 }
