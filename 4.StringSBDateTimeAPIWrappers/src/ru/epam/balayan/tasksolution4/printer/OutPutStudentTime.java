@@ -19,9 +19,9 @@ public class OutPutStudentTime implements IPrinterDatetime {
     @Override
     public void outPutDates(LocalDateTime startDate, LocalDateTime endDate, DateTimeFormatter formatter) {
         StringBuilder dates;
-        dates = new StringBuilder("Getting task datetime: ")
+        dates = new StringBuilder("Getting task date time: ")
                 .append(startDate.format(formatter)).append("\n")
-                .append("Current datetime: ")
+                .append("Current date time: ")
                 .append(endDate.format(formatter)).append("\n");
         System.out.println(dates);
     }
@@ -36,7 +36,7 @@ public class OutPutStudentTime implements IPrinterDatetime {
                 .append(" (").append(curricullum).append(") ").append("- Trainig ")
                 .append(finished ? "completed: " : "is not finished: ")
                 .append(daysResult != 0 ? daysResult + " day(s) " : "")
-                .append(hoursResult != 0 ? hoursResult + " hours " : "")
+                .append(hoursResult != 0 ? hoursResult + " hour(s) " : "")
                 .append(finished ? "passed" : "left");
         System.out.println(outPutResult);
     }

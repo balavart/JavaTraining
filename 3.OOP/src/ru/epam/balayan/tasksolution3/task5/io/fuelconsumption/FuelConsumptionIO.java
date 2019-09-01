@@ -26,7 +26,6 @@ public class FuelConsumptionIO implements IFuelConsumptionIO {
     public double getUserFuelConsumption(PassengerCar[] station, double minFuelCons, double maxFuelCons) {
         boolean digit = false;
         String fuelConsumption = null;
-
         System.out.println("Type starting fuel and final consumptions: ");
         while (!digit) {
             try {
@@ -58,7 +57,6 @@ public class FuelConsumptionIO implements IFuelConsumptionIO {
     @Override
     public void displayFuelConsumptionRange(PassengerCar[] station, double startFuelCons, double finalFuelCons) {
         int carNumAvaible = 0;
-
         System.out.println("Car list in the fuel consumption range from "
                 + startFuelCons + " L/100 km to " + finalFuelCons + " L/100 km: ");
         for (int i = 0; i < station.length; i++) {

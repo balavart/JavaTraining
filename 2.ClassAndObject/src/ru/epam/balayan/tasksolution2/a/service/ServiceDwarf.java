@@ -47,7 +47,6 @@ public class ServiceDwarf {
         String personName = null;
         int strengthLevel = 0;
         String[] names = {"Vardvin", "Muradin Bronzebeard", "Falstad Wildhammer", "Brymidaine Zecker", "Thargas Anvilmar"};
-
         DwarfClasses(int strengthLevel) {
             this.personName = names[(new Random().nextInt(names.length))];
             this.strengthLevel = strengthLevel;

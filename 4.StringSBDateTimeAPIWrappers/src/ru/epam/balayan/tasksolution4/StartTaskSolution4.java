@@ -7,9 +7,7 @@ import ru.epam.balayan.tasksolution4.hours.IWorkHours;
 import ru.epam.balayan.tasksolution4.hours.WorkHours;
 import ru.epam.balayan.tasksolution4.printer.IPrinterDatetime;
 import ru.epam.balayan.tasksolution4.printer.OutPutStudentTime;
-import ru.epam.balayan.tasksolution4.students.IStudents;
-import ru.epam.balayan.tasksolution4.students.IvanovIvan;
-import ru.epam.balayan.tasksolution4.students.PetrovPetr;
+import ru.epam.balayan.tasksolution4.students.Student;
 
 import java.time.format.DateTimeFormatter;
 
@@ -34,8 +32,10 @@ public class StartTaskSolution4 {
      */
     private void startApp() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-        IStudents ivanov = new IvanovIvan();
-        IStudents petrov = new PetrovPetr();
+        Student ivanov = new Student("Ivan Ivanov","J2EE Developer",
+                                     "27.08.2019 20:33",new short[]{16, 24});
+        Student petrov = new Student("Petr Petrov","Java Developer",
+                                     "27.08.2019 20:33",new short[]{8, 16, 16});
         IWorkDates workDates = new WorkDates();
         IWorkHours workHours = new WorkHours();
         IPrinterDatetime outPutResult = new OutPutStudentTime();
