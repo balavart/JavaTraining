@@ -1,6 +1,6 @@
-package ru.epam.balayan.tasksolution3.task5.model;
+package ru.epam.balayan.tasksolution3.task5.controller;
 
-import ru.epam.balayan.tasksolution3.task5.io.fuelconsuption.IFuelConsumptionIO;
+import ru.epam.balayan.tasksolution3.task5.io.fuelconsumption.IFuelConsumptionIO;
 import ru.epam.balayan.tasksolution3.task5.io.name.ICarNameIO;
 import ru.epam.balayan.tasksolution3.task5.io.price.IPriceIO;
 import ru.epam.balayan.tasksolution3.task5.io.stationcars.IStationCarsOutput;
@@ -8,9 +8,6 @@ import ru.epam.balayan.tasksolution3.task5.service.fuelconsuption.IServiceFuelCo
 import ru.epam.balayan.tasksolution3.task5.service.price.IServicePriceNumbers;
 import ru.epam.balayan.tasksolution3.task5.service.stationcars.IServiceStationCars;
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
-
-import java.io.BufferedReader;
-import java.io.IOException;
 
 
 /**
@@ -20,13 +17,13 @@ import java.io.IOException;
  * @version 1.8
  * is created on 8/26/2019
  */
-public class Model {
+public class StationController {
 
-    String userCarName;
-    int minPrice, maxPrice, startUserPriceNumber, finalUserPriceNumber;
-    double minFuelCons, maxFuelCons, startUserFuelConsNum, finalUserFuelConsNum;
+    private String userCarName;
+    private int minPrice, maxPrice, startUserPriceNumber, finalUserPriceNumber;
+    private double minFuelCons, maxFuelCons, startUserFuelConsNum, finalUserFuelConsNum;
 
-    public Model() {
+    public StationController() {
     }
 
     /**
@@ -34,7 +31,7 @@ public class Model {
      *
      * @see ICarNameIO
      */
-    public Model(ICarNameIO io) {
+    public StationController(ICarNameIO io) {
         this.userCarName = io.getUserCarName();
     }
 
@@ -45,7 +42,7 @@ public class Model {
      * @see IPriceIO
      * @see IServicePriceNumbers
      */
-    public Model(PassengerCar[] station, IPriceIO io, IServicePriceNumbers numbers) {
+    public StationController(PassengerCar[] station, IPriceIO io, IServicePriceNumbers numbers) {
         this.minPrice = numbers.getMinPrice(station);
         this.maxPrice = numbers.getMaxPrice(station);
         this.startUserPriceNumber = io.getUserPrice(minPrice, maxPrice);
@@ -59,7 +56,7 @@ public class Model {
      * @see IFuelConsumptionIO
      * @see IServiceFuelConsNumbers
      */
-    public Model(PassengerCar[] station, IFuelConsumptionIO io, IServiceFuelConsNumbers numbers) {
+    public StationController(PassengerCar[] station, IFuelConsumptionIO io, IServiceFuelConsNumbers numbers) {
         this.minFuelCons = numbers.getMinFuelConsumption(station);
         this.maxFuelCons = numbers.getMaxFuelConsumption(station);
         this.startUserFuelConsNum = io.getUserFuelConsumption(station, minFuelCons, maxFuelCons);
@@ -68,11 +65,11 @@ public class Model {
 
     /**
      * initializes all fields, calling all interfaces
-     * HACK: constructor is used to quickly call objects
+     * constructor is used to quickly call objects
      */
-    public Model(PassengerCar[] station, ICarNameIO carNameIO,
-                 IPriceIO priceIO, IServicePriceNumbers priceNumbers,
-                 IFuelConsumptionIO fuelConsumptionIO, IServiceFuelConsNumbers fuelConsNumbers) {
+    public StationController(PassengerCar[] station, ICarNameIO carNameIO,
+                             IPriceIO priceIO, IServicePriceNumbers priceNumbers,
+                             IFuelConsumptionIO fuelConsumptionIO, IServiceFuelConsNumbers fuelConsNumbers) {
         this.userCarName = carNameIO.getUserCarName();
         this.minPrice = priceNumbers.getMinPrice(station);
         this.maxPrice = priceNumbers.getMaxPrice(station);
@@ -116,19 +113,7 @@ public class Model {
         carsNameIO.displayCarsName(station, userCarName);
         priceIO.displayCarsPriceRange(station, startUserPriceNumber, finalUserPriceNumber);
         fuelConsIO.displayFuelConsumptionRange(station, startUserFuelConsNum, finalUserFuelConsNum);
-
     }
 
-    /**
-     * method closes keyboard input stream
-     */
-    public void closeBufReadStream(BufferedReader reader) {
-        try {
-            reader.close();
-            System.out.println("End of program.");
-        } catch (IOException e) {
-            System.out.println(e.getMessage() + "End of program.");
-        }
-    }
 
 }

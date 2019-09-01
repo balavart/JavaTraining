@@ -27,7 +27,6 @@ public class CarNameIO implements ICarNameIO {
     public String getUserCarName() {
         String carClassName;
         String[] carClassNames = {"Cabriolet", "Limousine", "Sedan"};
-
         System.out.println("Type car classification name: ");
         while (true) {
             try {
@@ -45,14 +44,12 @@ public class CarNameIO implements ICarNameIO {
                 System.err.println(e.getMessage());
             }
         }
-
         return carClassName;
     }
 
     @Override
     public void displayCarsName(PassengerCar[] station, String carClassName) {
         int carNumAvaible = 0;
-
         System.out.println("Car list with classification: " + carClassName);
         try {
             for (int i = 0; i < station.length; i++) {

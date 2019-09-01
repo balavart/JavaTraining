@@ -7,7 +7,6 @@ import ru.epam.balayan.tasksolution3.task5.cars.classification.Limousine;
 
 /**
  * this abstract class is contract between car classes
- * HACK: possibly a better way is to divide methods into interfaces
  *
  * @author Balayan Vardan
  * @version 1.8

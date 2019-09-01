@@ -12,6 +12,7 @@ package ru.epam.balayan.tasksolution2.a;
  * is created on 8/22/2019
  */
 public class Dwarf implements Comparable {
+
     private String personName = null;
     private int strengthLevel = 0;
 
@@ -20,20 +21,12 @@ public class Dwarf implements Comparable {
         this.strengthLevel = strengthLevel;
     }
 
-    int getStrengthLevel() {
+    public int getStrengthLevel() {
         return strengthLevel;
     }
 
-    void setStrengthLevel(int strengthLevel) {
-        this.strengthLevel = strengthLevel;
-    }
-
-    String getPersonName() {
+    public String getPersonName() {
         return personName;
-    }
-
-    void setPersonName(String personName) {
-        this.personName = personName;
     }
 
     @Override

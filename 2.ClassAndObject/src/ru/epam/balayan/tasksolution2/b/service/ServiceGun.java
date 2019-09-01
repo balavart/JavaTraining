@@ -1,4 +1,4 @@
-package ru.epam.balayan.tasksolution2.b.model;
+package ru.epam.balayan.tasksolution2.b.service;
 
 import ru.epam.balayan.tasksolution2.b.contract.Shootable;
 import ru.epam.balayan.tasksolution2.b.gunClasses.AK12;
@@ -6,6 +6,7 @@ import ru.epam.balayan.tasksolution2.b.gunClasses.HK416;
 
 import java.util.Arrays;
 import java.util.Random;
+
 
 /**
  * this is a model class
@@ -18,7 +19,8 @@ import java.util.Random;
  * @see HK416
  * is created on 8/23/2019
  */
-public class ModelGun {
+public class ServiceGun {
+
     /**
      * method add an randomly filled object array
      *
@@ -28,7 +30,6 @@ public class ModelGun {
         Shootable[] guns = new Shootable[(5 + (int) (Math.random() * ((10 - 5) + 1)))];
         Object obj = null;
         int randomNum = 0;
-
         for (int i = 0; i < guns.length; i++) {
             randomNum = new Random().nextInt(2);
             switch (randomNum) {
@@ -41,7 +42,6 @@ public class ModelGun {
             }
             guns[i] = (Shootable) obj;
         }
-
         return guns;
     }
 
@@ -56,18 +56,15 @@ public class ModelGun {
         Shootable[][] gunsArrArr = null;
         int akCount = 0;
         int hkCount = 0;
-
         for (int i = 0; i < paramArr.length; i++) {
             if (paramArr[i].equals(new AK12())) {
                 akCount++;
             }
         }
-
         Shootable[] ak12Arr = new Shootable[akCount];
         for (int i = 0; i < ak12Arr.length; i++) {
             ak12Arr[i] = new AK12();
         }
-
         for (int i = 0; i < paramArr.length; i++) {
             if (paramArr[i].equals(new HK416())) {
                 hkCount++;
@@ -77,9 +74,7 @@ public class ModelGun {
         for (int i = 0; i < hk416Arr.length; i++) {
             hk416Arr[i] = new HK416();
         }
-
         gunsArrArr = new Shootable[][]{ak12Arr, hk416Arr};
-
         return gunsArrArr;
     }
 
@@ -92,4 +87,5 @@ public class ModelGun {
         System.out.println("The one-dimensional object array: " + Arrays.toString(displayArr));
         System.out.println("The two-dimensional object array: " + Arrays.deepToString(displayArrArr));
     }
+
 }

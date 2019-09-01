@@ -16,13 +16,11 @@ public class StationCarsOutput implements IStationCarsOutput {
     @Override
     public void displayStationCars(PassengerCar[] station) {
         int carNumAvaible = 0;
-
         System.out.println("Car list: ");
         for (PassengerCar cars : station) {
             System.out.println(cars);
             carNumAvaible++;
         }
-
         System.out.println(carNumAvaible + " cars available" + "\n");
     }
 

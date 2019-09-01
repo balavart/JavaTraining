@@ -22,15 +22,12 @@ public class StationCarsSortedOutput implements IStationCarsOutput {
     @Override
     public void displayStationCars(PassengerCar[] station) {
         int carNumAvaible = 0;
-
         Arrays.sort(station, Comparator.comparing(PassengerCar::getFuelСonsumption));
-
         System.out.println("Car sorted list by fuel consumption: ");
         for (PassengerCar cars : station) {
             System.out.println(cars);
             carNumAvaible++;
         }
-
         System.out.println(carNumAvaible + " cars available" + "\n");
     }
 

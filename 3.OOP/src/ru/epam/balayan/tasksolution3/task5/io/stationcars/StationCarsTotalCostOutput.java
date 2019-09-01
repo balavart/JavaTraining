@@ -20,12 +20,10 @@ public class StationCarsTotalCostOutput implements IStationCarsOutput {
     public void displayStationCars(PassengerCar[] station) {
         int totalCost = 0;
         int carNumAvaible = 0;
-
         for (PassengerCar cars : station) {
             totalCost += cars.getPrice();
             carNumAvaible++;
         }
-
         System.out.println("Total cost the taxi fleet is: " + totalCost + "$");
         System.out.println(carNumAvaible + " cars available" + "\n");
     }

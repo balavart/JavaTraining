@@ -1,4 +1,4 @@
-package ru.epam.balayan.tasksolution3.task5.io.fuelconsuption;
+package ru.epam.balayan.tasksolution3.task5.io.fuelconsumption;
 
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 
@@ -52,7 +52,6 @@ public class FuelConsumptionIO implements IFuelConsumptionIO {
                 System.err.println("Type fuel consumption range from : " + minFuelCons + " to " + maxFuelCons);
             }
         }
-
         return Double.parseDouble(fuelConsumption);
     }
 
@@ -68,7 +67,6 @@ public class FuelConsumptionIO implements IFuelConsumptionIO {
                 carNumAvaible++;
             }
         }
-
         System.out.println(carNumAvaible + " cars available" + "\n");
     }
 

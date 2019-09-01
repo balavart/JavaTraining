@@ -16,26 +16,22 @@ public class ServiceFuelConsNumbers implements IServiceFuelConsNumbers {
     @Override
     public double getMinFuelConsumption(PassengerCar[] station) {
         double min = station[0].getFuelСonsumption();
-
         for (int i = 0; i < station.length; i++) {
             if (min > station[i].getFuelСonsumption()) {
                 min = station[i].getFuelСonsumption();
             }
         }
-
         return min;
     }
 
     @Override
     public double getMaxFuelConsumption(PassengerCar[] station) {
         double max = station[0].getFuelСonsumption();
-
         for (int i = 0; i < station.length; i++) {
             if (max < station[i].getFuelСonsumption()) {
                 max = station[i].getFuelСonsumption();
             }
         }
-
         return max;
     }
 

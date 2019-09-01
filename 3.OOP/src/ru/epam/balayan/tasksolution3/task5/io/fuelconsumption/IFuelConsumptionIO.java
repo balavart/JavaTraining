@@ -1,4 +1,4 @@
-package ru.epam.balayan.tasksolution3.task5.io.fuelconsuption;
+package ru.epam.balayan.tasksolution3.task5.io.fuelconsumption;
 
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 

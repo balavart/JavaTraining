@@ -30,7 +30,6 @@ public class ServiceStationCars implements IServiceStationCars {
     @Override
     public PassengerCar[] getCollectedСars() {
         PassengerCar[] tempCarsArr = new PassengerCar[20];
-
         for (int i = 0; i < tempCarsArr.length; i++) {
             int carNum = new Random().nextInt(9);
             switch (carNum) {
@@ -66,7 +65,6 @@ public class ServiceStationCars implements IServiceStationCars {
                     break;
             }
         }
-
         return tempCarsArr;
     }
 

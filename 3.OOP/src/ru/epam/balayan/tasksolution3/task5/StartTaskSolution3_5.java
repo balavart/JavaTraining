@@ -1,7 +1,7 @@
 package ru.epam.balayan.tasksolution3.task5;
 
-import ru.epam.balayan.tasksolution3.task5.io.fuelconsuption.FuelConsumptionIO;
-import ru.epam.balayan.tasksolution3.task5.io.fuelconsuption.IFuelConsumptionIO;
+import ru.epam.balayan.tasksolution3.task5.io.fuelconsumption.FuelConsumptionIO;
+import ru.epam.balayan.tasksolution3.task5.io.fuelconsumption.IFuelConsumptionIO;
 import ru.epam.balayan.tasksolution3.task5.io.name.CarNameIO;
 import ru.epam.balayan.tasksolution3.task5.io.name.ICarNameIO;
 import ru.epam.balayan.tasksolution3.task5.io.price.IPriceIO;
@@ -10,7 +10,7 @@ import ru.epam.balayan.tasksolution3.task5.io.stationcars.IStationCarsOutput;
 import ru.epam.balayan.tasksolution3.task5.io.stationcars.StationCarsOutput;
 import ru.epam.balayan.tasksolution3.task5.io.stationcars.StationCarsSortedOutput;
 import ru.epam.balayan.tasksolution3.task5.io.stationcars.StationCarsTotalCostOutput;
-import ru.epam.balayan.tasksolution3.task5.model.Model;
+import ru.epam.balayan.tasksolution3.task5.controller.StationController;
 import ru.epam.balayan.tasksolution3.task5.service.fuelconsuption.IServiceFuelConsNumbers;
 import ru.epam.balayan.tasksolution3.task5.service.fuelconsuption.ServiceFuelConsNumbers;
 import ru.epam.balayan.tasksolution3.task5.service.price.IServicePriceNumbers;
@@ -20,6 +20,7 @@ import ru.epam.balayan.tasksolution3.task5.service.stationcars.ServiceStationCar
 import ru.epam.balayan.tasksolution3.task5.station.TaxiStation;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 
@@ -31,23 +32,24 @@ import java.io.InputStreamReader;
  * @version 1.8
  * is created on 8/26/2019
  */
-class StartTaskSolution3_5 {
+class StartTaskSolution3_5 implements AutoCloseable {
 
     public static void main(String[] args) {
-        StartTaskSolution3_5 taskSolution3_5 = new StartTaskSolution3_5();
-        taskSolution3_5.startApp();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            StartTaskSolution3_5 taskSolution3_5 = new StartTaskSolution3_5();
+            taskSolution3_5.startApp(reader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
      * method for quickly creating and executing objects
      */
-    void startApp() {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
+    private void startApp(BufferedReader reader) {
         IServiceStationCars stationCars = new ServiceStationCars();
-        Model model = new Model();
-        TaxiStation station = new TaxiStation(model.getCollectedCars(stationCars));
-
+        StationController stationController = new StationController();
+        TaxiStation station = new TaxiStation(stationController.getCollectedCars(stationCars));
         IStationCarsOutput carsTotalCost = new StationCarsTotalCostOutput();
         IStationCarsOutput carsOutput = new StationCarsOutput();
         IStationCarsOutput sortedCarsOutput = new StationCarsSortedOutput();
@@ -56,15 +58,18 @@ class StartTaskSolution3_5 {
         IServicePriceNumbers priceNumbers = new ServicePriceNumbers();
         IFuelConsumptionIO fuelConsumptionIO = new FuelConsumptionIO(reader);
         IServiceFuelConsNumbers fuelConsNumbers = new ServiceFuelConsNumbers();
-
-        model.resultCars(station.getStation(), carsTotalCost, carsOutput, sortedCarsOutput);
-
-        Model execute = new Model(station.getStation(), carNameIO, priceIO, priceNumbers,
+        stationController.resultCars(station.getStation(), carsTotalCost, carsOutput, sortedCarsOutput);
+        StationController execute = new StationController(station.getStation(), carNameIO, priceIO, priceNumbers,
                 fuelConsumptionIO, fuelConsNumbers);
-
         execute.resultFilter(station.getStation(), carNameIO, priceIO, fuelConsumptionIO);
+    }
 
-        model.closeBufReadStream(reader);
+    @Override
+    public void close() {
+        System.out.println("End of program.");
     }
 
 }
+
+
+

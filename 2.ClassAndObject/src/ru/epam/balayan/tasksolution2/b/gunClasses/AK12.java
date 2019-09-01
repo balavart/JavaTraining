@@ -14,9 +14,9 @@ import ru.epam.balayan.tasksolution2.b.contract.Shootable;
  */
 public class AK12 implements Shootable {
 
-    double clipСapacity = 30.0d;
-    double secondShot = 11.6d;
-    double clipEnough = 0;
+    private double clipСapacity = 30.0d;
+    private double secondShot = 11.6d;
+    private double clipEnough = 0;
 
     /**
      * overriding Shootable method
@@ -27,7 +27,8 @@ public class AK12 implements Shootable {
     @Override
     public void shoot() {
         clipEnough = (int) ((clipСapacity / secondShot) * 100) / 100d;
-        System.out.println(getClass().getSimpleName() + " clip shoots " + (int) clipСapacity + " bullets for " + clipEnough + " seconds");
+        System.out.println(getClass().getSimpleName()
+                + " clip shoots " + (int) clipСapacity + " bullets for " + clipEnough + " seconds");
     }
 
     /**

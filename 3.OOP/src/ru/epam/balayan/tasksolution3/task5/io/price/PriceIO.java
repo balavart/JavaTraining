@@ -26,7 +26,6 @@ public class PriceIO implements IPriceIO {
     public int getUserPrice(int minPrice, int maxPrice) {
         boolean digit = false;
         String price = null;
-
         System.out.println("Type starting and final prices: ");
         while (!digit) {
             try {
@@ -55,7 +54,6 @@ public class PriceIO implements IPriceIO {
     @Override
     public void displayCarsPriceRange(PassengerCar[] paramStation, int startPrice, int finalPrice) {
         int carNumAvaible = 0;
-
         System.out.println("Car list in the price range from " + startPrice + "$ to " + finalPrice + "$: ");
         for (int i = 0; i < paramStation.length; i++) {
             if (startPrice <= paramStation[i].getPrice() && finalPrice >= paramStation[i].getPrice()) {

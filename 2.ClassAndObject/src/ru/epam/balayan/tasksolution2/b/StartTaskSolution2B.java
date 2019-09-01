@@ -1,6 +1,6 @@
 package ru.epam.balayan.tasksolution2.b;
 
-import ru.epam.balayan.tasksolution2.b.model.ModelGun;
+import ru.epam.balayan.tasksolution2.b.service.ServiceGun;
 
 
 /**
@@ -18,11 +18,10 @@ class StartTaskSolution2B {
     }
 
     /**
-     * method starting methods
-     * {@link ModelGun#displayShootableArrArr()}
+     * method for quickly creating and executing objects
      */
     void startApp() {
-        ModelGun modelGun = new ModelGun();
+        ServiceGun modelGun = new ServiceGun();
         modelGun.displayShootableArrArr();
     }
 

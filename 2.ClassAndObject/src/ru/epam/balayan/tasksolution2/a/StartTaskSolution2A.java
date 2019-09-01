@@ -1,6 +1,6 @@
 package ru.epam.balayan.tasksolution2.a;
 
-import ru.epam.balayan.tasksolution2.a.model.ModelDwarf;
+import ru.epam.balayan.tasksolution2.a.service.ServiceDwarf;
 
 
 /**
@@ -18,12 +18,10 @@ class StartTaskSolution2A {
     }
 
     /**
-     * method starting methods
-     * {@link ModelDwarf#quivalentObjNum(Dwarf[]}
-     * {@link ModelDwarf#objDisplay(Dwarf[]}
+     * method for quickly creating and executing objects
      */
     void startApp() {
-        ModelDwarf modelDwarf = new ModelDwarf();
+        ServiceDwarf modelDwarf = new ServiceDwarf();
         modelDwarf.quivalentObjNum(modelDwarf.addDwarfArr());
         System.out.println();
         modelDwarf.objDisplay(modelDwarf.addDwarfArr());

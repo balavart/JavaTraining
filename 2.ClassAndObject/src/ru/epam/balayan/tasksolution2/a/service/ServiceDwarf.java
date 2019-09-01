@@ -1,4 +1,4 @@
-package ru.epam.balayan.tasksolution2.a.model;
+package ru.epam.balayan.tasksolution2.a.service;
 
 import ru.epam.balayan.tasksolution2.a.Dwarf;
 
@@ -15,7 +15,7 @@ import java.util.*;
  * @see Dwarf
  * is created on 8/22/2019
  */
-public class ModelDwarf {
+public class ServiceDwarf {
 
     /**
      * method creates an array of objects and assigns values​from Enum
@@ -29,7 +29,6 @@ public class ModelDwarf {
         dwarfArr[2] = new Dwarf(DwarfClasses.HUNTER.personName, DwarfClasses.HUNTER.strengthLevel);
         dwarfArr[3] = new Dwarf(DwarfClasses.ROGUE.personName, DwarfClasses.ROGUE.strengthLevel);
         dwarfArr[4] = new Dwarf(DwarfClasses.MONK.personName, DwarfClasses.MONK.strengthLevel);
-
         return dwarfArr;
     }
 
@@ -38,6 +37,7 @@ public class ModelDwarf {
      * generates a random field numbers and selects random string values
      */
     enum DwarfClasses {
+
         PALADIN((int) (Math.random() * 5)),
         WARRIOR((int) (Math.random() * 5)),
         HUNTER((int) (Math.random() * 5)),
@@ -46,7 +46,6 @@ public class ModelDwarf {
 
         String personName = null;
         int strengthLevel = 0;
-
         String[] names = {"Vardvin", "Muradin Bronzebeard", "Falstad Wildhammer", "Brymidaine Zecker", "Thargas Anvilmar"};
 
         DwarfClasses(int strengthLevel) {
@@ -65,7 +64,6 @@ public class ModelDwarf {
     public int quivalentObjNum(Dwarf[] dwarves) {
         TreeSet<Dwarf> dwarfTreeSet = new TreeSet<>();
         Dwarf[] newDwarfArr = null;
-
         for (int i = 0; i < dwarves.length; i++) {
             for (int j = dwarves.length - 1; j > 0; j--) {
                 if (i == j) {
@@ -75,15 +73,12 @@ public class ModelDwarf {
                     dwarfTreeSet.add(dwarves[i]);
                 }
             }
-
             Object[] objDwarfArr = dwarfTreeSet.toArray();
             newDwarfArr = new Dwarf[objDwarfArr.length];
-
             for (int j = 0; j < newDwarfArr.length; j++) {
                 newDwarfArr[j] = (Dwarf) objDwarfArr[j];
             }
         }
-
         System.out.println("The array of repeating objects: ");
         if (newDwarfArr.length != 0) {
             for (int i = 0; i < newDwarfArr.length; i++) {
@@ -92,9 +87,7 @@ public class ModelDwarf {
         } else {
             System.out.println("No objects exist");
         }
-
         System.out.println("The number of equivalent objects: " + newDwarfArr.length);
-
         return newDwarfArr.length;
     }
 

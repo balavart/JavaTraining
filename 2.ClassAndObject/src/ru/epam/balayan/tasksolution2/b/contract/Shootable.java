@@ -15,6 +15,6 @@ import ru.epam.balayan.tasksolution2.b.gunClasses.HK416;
  */
 public interface Shootable {
 
-    public void shoot();
+    void shoot();
 
 }

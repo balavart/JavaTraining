@@ -1,10 +1,10 @@
 package ru.epam.balayan.tasksolution;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+
 
 /**
  * this is main starting app class
@@ -15,6 +15,7 @@ import java.util.Arrays;
  * is created on 8/18/2019
  */
 public class StartTaskSolution1 {
+
     private static int[] primaryArray;
     private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static int countStr = 0;
@@ -50,11 +51,9 @@ public class StartTaskSolution1 {
      */
     void addArray() {
         primaryArray = new int[20];
-
         for (int i = 0; i < primaryArray.length; i++) {
             primaryArray[i] = (int) (Math.random() * (20 + 1)) - 10;
         }
-
         System.out.println("An array with random elements -10 to 10: " + "\n" + Arrays.toString(primaryArray) + "\n");
     }
 
@@ -67,37 +66,31 @@ public class StartTaskSolution1 {
     void switchElements(int[] array) {
         int minPosElement = 0;
         int maxNegElement = 0;
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] > 0) {
                 minPosElement = i;
                 break;
             }
         }
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
                 maxNegElement = i;
                 break;
             }
         }
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] > 0 && array[i] < array[minPosElement]) {
                 minPosElement = i;
             }
         }
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0 && array[i] < array[maxNegElement]) {
                 maxNegElement = i;
             }
         }
-
         int swag = array[minPosElement];
         array[minPosElement] = array[maxNegElement];
         array[maxNegElement] = swag;
-
         System.out.println("Replacing the maximum negative and the minimum positive elements: " + "\n" + Arrays.toString(array) + "\n");
     }
 
@@ -109,13 +102,11 @@ public class StartTaskSolution1 {
      */
     void sumElements(int[] array) {
         int sum = 0;
-
         for (int i = 0; i < array.length; i++) {
             if (i % 2 == 0) {
                 sum += array[i];
             }
         }
-
         System.out.println("Elements sum of even positions: " + "\n" + sum + "\n");
     }
 
@@ -126,13 +117,11 @@ public class StartTaskSolution1 {
      * @param array
      */
     void zeroReplace(int[] array) {
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
                 array[i] = 0;
             }
         }
-
         System.out.println("Zeroing negative elements: " + "\n" + Arrays.toString(array) + "\n");
     }
 
@@ -143,7 +132,6 @@ public class StartTaskSolution1 {
      * @param array
      */
     void tripleElements(int[] array) {
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
                 if (i != 0 && array[i - 1] > 0) {
@@ -151,7 +139,6 @@ public class StartTaskSolution1 {
                 }
             }
         }
-
         System.out.println("Tripling positive element in front of a negative element: " + "\n" + Arrays.toString(array) + "\n");
     }
 
@@ -165,19 +152,15 @@ public class StartTaskSolution1 {
         double average = 0;
         double sum = 0;
         int minValue = 0;
-
         for (int temp : array) {
             sum += temp;
         }
-
         average = sum / array.length;
-
         for (int temp : array) {
             if (temp < array[0]) {
                 minValue = temp;
             }
         }
-
         System.out.println("The difference between the minimum element value and the arithmetic mean value: " + "\n" + (minValue - average) + "\n");
     }
 
@@ -188,9 +171,7 @@ public class StartTaskSolution1 {
      * @param array
      */
     void repeatElements(int[] array) {
-
         System.out.print("Repeat array numbers of odd indices: " + "\n");
-
         for (int i = 0; i < array.length; i++) {
             if (i % 2 != 0) {
                 for (int j = i + 1; j < array.length; j++) {
@@ -213,7 +194,6 @@ public class StartTaskSolution1 {
         boolean digit = false;
         String str = null;
         System.out.println("Type string quantity: ");
-
         while (!digit) {
             try {
                 str = reader.readLine();
@@ -232,11 +212,9 @@ public class StartTaskSolution1 {
      * some methods use this method
      */
     boolean isDigit(String string) {
-
         if (string.isEmpty()) {
             return false;
         }
-
         for (int i = 0; i < string.length(); i++) {
             if (!Character.isDigit(string.charAt(i)) || string.equals("0")) {
                 System.err.println("Type a number!");
@@ -257,9 +235,7 @@ public class StartTaskSolution1 {
         String shortStr = null;
         String longStr = null;
         String text = null;
-
         inputStrCount();
-
         for (int i = 0; i < countStr; i++) {
             System.out.println("Type a string: " + (i + 1));
             try {
@@ -289,7 +265,6 @@ public class StartTaskSolution1 {
         int average = 0;
         inputStrCount();
         String[] text = new String[countStr];
-
         for (int i = 0; i < countStr; i++) {
             System.out.println("Type a string: " + (i + 1));
             try {
@@ -300,9 +275,7 @@ public class StartTaskSolution1 {
             }
         }
         average /= countStr;
-
         System.out.print("Strings longer than an average: " + "\n");
-
         for (int i = 0; i < countStr; i++) {
             if (text[i].length() > average) {
                 System.out.println("\"" + text[i] + "\"" + " - This string's length: " + text[i].length());
@@ -324,7 +297,6 @@ public class StartTaskSolution1 {
         int average = 0;
         inputStrCount();
         String[] text = new String[countStr];
-
         for (int i = 0; i < countStr; i++) {
             System.out.println("Type a string: " + (i + 1));
             try {
@@ -335,9 +307,7 @@ public class StartTaskSolution1 {
             }
         }
         average /= countStr;
-
         System.out.print("Strings shorter than an average: " + "\n");
-
         for (int i = 0; i < countStr; i++) {
             if (text[i].length() < average) {
                 System.out.println("\"" + text[i] + "\"" + " - This string's length: " + text[i].length());
@@ -360,7 +330,6 @@ public class StartTaskSolution1 {
         String[] text = new String[countStr];
         int[] intArr = new int[countStr];
         int min = 0;
-
         for (int i = 0; i < countStr; i++) {
             System.out.println("Type some word: " + (i + 1));
             try {
@@ -369,19 +338,15 @@ public class StartTaskSolution1 {
                 e.getMessage();
             }
         }
-
         for (int i = 0; i < text.length; i++) {
             intArr[i] = (int) text[i].toLowerCase().chars().distinct().count();
         }
-
         min = intArr[0];
-
         for (int i = 0; i < intArr.length; i++) {
             if (min > intArr[i]) {
                 min = intArr[i];
             }
         }
-
         for (int i = 0; i < text.length; i++) {
             if (text[i].toLowerCase().chars().distinct().count() == min) {
                 System.out.println("The first specified word with the minimal number of different characters: " + "\"" + text[i] + "\"");
@@ -403,7 +368,6 @@ public class StartTaskSolution1 {
     void differentChars() {
         inputStrCount();
         String[] text = new String[countStr];
-
         for (int i = 0; i < countStr; i++) {
             System.out.println("Type some word: " + (i + 1));
             try {
@@ -412,7 +376,6 @@ public class StartTaskSolution1 {
                 e.getMessage();
             }
         }
-
         for (int i = 0; i < text.length; i++) {
             if (text[i].toLowerCase().chars().distinct().count() == text[i].length()) {
                 System.out.println("The first specified word consisting various characters: " + "\"" + text[i] + "\"");
@@ -435,7 +398,6 @@ public class StartTaskSolution1 {
         inputStrCount();
         String[] text = new String[countStr];
         String[] strArr = new String[countStr];
-
         for (int i = 0; i < countStr; i++) {
             System.out.println("Type some word: " + (i + 1));
             try {
@@ -444,18 +406,15 @@ public class StartTaskSolution1 {
                 e.getMessage();
             }
         }
-
         for (int i = 0; i < text.length; i++) {
             strArr[i] = text[i].replaceAll("\\D+", "");
         }
-
         for (int i = 0; i < text.length; i++) {
             if (text[i].equals(strArr[i])) {
                 text[i] = " ";
                 break;
             }
         }
-
         for (int i = 0; i < text.length; i++) {
             if (text[i].equals(strArr[i])) {
                 System.out.println("The specified word consisting of numbers only or the second word after the first counter: " + "\"" + text[i] + "\"");
