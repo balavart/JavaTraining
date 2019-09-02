@@ -2,3 +2,5 @@
 .idea/**/uiDesigner.xml
 /.idea/vcs.xml
 out/
+/.idea/checkstyle-idea.xml
+/.idea/google-java-format.xml

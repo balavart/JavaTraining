@@ -11,40 +11,35 @@ import ru.epam.balayan.tasksolution5.students.Student;
 
 import java.time.format.DateTimeFormatter;
 
-
 /**
- * this app is a solution for EPAM Java Training homework № 4
- * this is main starting app class
+ * this app is a solution for EPAM Java Training homework № 4 this is main starting app class
  *
  * @author Balayan Vardan
- * @version 1.8
- * is created on 8/31/2019
+ * @version 1.8 creation date 8/31/2019
  */
 public class StartTaskSolution5 {
+  public static void main(String[] args) {
+    StartTaskSolution5 taskSolution5 = new StartTaskSolution5();
 
-    public static void main(String[] args) {
-        StartTaskSolution5 taskSolution5 = new StartTaskSolution5();
-        taskSolution5.startApp();
-    }
+    taskSolution5.startApp();
+  }
 
-    /**
-     * method for quickly creating and executing objects
-     */
-    private void startApp() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
-        Student ivanov = new Student("Ivan Ivanov","J2EE Developer",
-                                     "27.08.2019 20:33",new short[]{16, 24});
-        Student petrov = new Student("Petr Petrov","Java Developer",
-                                     "27.08.2019 20:33",new short[]{8, 16, 16});
-        IWorkDates workDates = new WorkDates();
-        IWorkHours workHours = new WorkHours();
-        IPrinterDatetime outPutResult = new OutPutStudentTime();
+  /** method for quickly creating and executing objects */
+  private void startApp() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
+    Student ivanov =
+        new Student("Ivan Ivanov", "J2EE Developer", "27.08.2019 20:33", new short[] {16, 24});
+    Student petrov =
+        new Student("Petr Petrov", "Java Developer", "27.08.2019 20:33", new short[] {8, 16, 16});
+    IWorkDates workDates = new WorkDates();
+    IWorkHours workHours = new WorkHours();
+    IPrinterDatetime outPutResult = new OutPutStudentTime();
+    DateTimeController ivanovTime = new DateTimeController(workDates, workHours, ivanov, formatter);
 
-        DateTimeController ivanovTime = new DateTimeController(workDates, workHours, ivanov, formatter);
-        ivanovTime.outPutTimeResult(outPutResult, ivanov, formatter);
+    ivanovTime.outPutTimeResult(outPutResult, ivanov, formatter);
 
-        DateTimeController petrovTime = new DateTimeController(workDates, workHours, petrov, formatter);
-        petrovTime.outPutTimeResult(outPutResult, petrov, formatter);
-    }
+    DateTimeController petrovTime = new DateTimeController(workDates, workHours, petrov, formatter);
 
+    petrovTime.outPutTimeResult(outPutResult, petrov, formatter);
+  }
 }
