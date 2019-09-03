@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.cars.limousine;
 import ru.epam.balayan.tasksolution3.task5.cars.classification.Limousine;
 
 /**
- * this class is a child of its car classification
+ * this class is a child of its car classification.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -12,7 +12,7 @@ import ru.epam.balayan.tasksolution3.task5.cars.classification.Limousine;
 public class VolkswagenBeetle extends Limousine {
   private String name = super.getName() + " Volkswagen Beetle";
   private int price = 24900;
-  private double fuelСonsumption = 7.6d;
+  private double fuelConsumption = 7.6d;
 
   @Override
   public String toString() {
@@ -21,13 +21,13 @@ public class VolkswagenBeetle extends Limousine {
         + getPrice()
         + "$"
         + ", fuel consumption: "
-        + getFuelСonsumption()
+        + getFuelConsumption()
         + " L/100 km";
   }
 
   @Override
-  public double getFuelСonsumption() {
-    return fuelСonsumption;
+  public double getFuelConsumption() {
+    return fuelConsumption;
   }
 
   @Override

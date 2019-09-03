@@ -1,12 +1,12 @@
 package ru.epam.balayan.tasksolution4.printer;
 
-import ru.epam.balayan.tasksolution4.hours.WorkHours;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import ru.epam.balayan.tasksolution4.hours.WorkHours;
+
 /**
- * implementation with conditions date times output
+ * implementation with conditions date times output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019

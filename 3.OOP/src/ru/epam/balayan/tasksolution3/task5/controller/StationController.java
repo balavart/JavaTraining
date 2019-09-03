@@ -10,21 +10,29 @@ import ru.epam.balayan.tasksolution3.task5.service.price.IServicePriceNumbers;
 import ru.epam.balayan.tasksolution3.task5.service.stationcars.IServiceStationCars;
 
 /**
- * this class is a controller between interfaces
+ * this class is a controller between interfaces.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
  */
 public class StationController {
   private String userCarName;
-  private int minPrice, maxPrice, startUserPriceNumber, finalUserPriceNumber;
-  private double minFuelCons, maxFuelCons, startUserFuelConsNum, finalUserFuelConsNum;
+  private int minPrice;
+  private int maxPrice;
+  private int startUserPriceNumber;
+  private int finalUserPriceNumber;
+  private double minFuelCons;
+  private double maxFuelCons;
+  private double startUserFuelConsNum;
+  private double finalUserFuelConsNum;
 
-  public StationController() {}
+  public StationController() {
+
+  }
 
   /**
    * initializes the field by calling the interface with operation for car name input and cars
-   * output
+   * output.
    *
    * @see ICarNameIO
    */
@@ -33,8 +41,8 @@ public class StationController {
   }
 
   /**
-   * initializes the fields by calling the interface with operation for fuel input and cars output
-   * initializes the fields by calling the interface for getting fuel consumption numbers
+   * initializes the fields by calling the interface with operation for fuel input and cars output.
+   * initializes the fields by calling the interface for getting fuel consumption numbers.
    *
    * @see IFuelConsumptionIO
    * @see IServiceFuelConsNumbers
@@ -48,8 +56,8 @@ public class StationController {
   }
 
   /**
-   * initializes the fields by calling the interface with operation for price input and cars output
-   * initializes the fields by calling the interface for getting price numbers
+   * initializes the fields by calling the interface with operation for price input and cars output.
+   * initializes the fields by calling the interface for getting price numbers.
    *
    * @see IPriceIO
    * @see IServicePriceNumbers
@@ -61,7 +69,7 @@ public class StationController {
     this.finalUserPriceNumber = io.getUserPrice(minPrice, maxPrice);
   }
 
-  /** initializes all fields, calling all interfaces constructor is used to quickly call objects */
+  /** initializes all fields, calling all interfaces constructor is used to quickly call objects. */
   public StationController(
       PassengerCar[] station,
       ICarNameIO carNameIO,
@@ -82,6 +90,7 @@ public class StationController {
         fuelConsumptionIO.getUserFuelConsumption(station, minFuelCons, maxFuelCons);
   }
 
+  /** display cars. */
   public void resultCars(
       PassengerCar[] station,
       IStationCarsOutput totalCost,
@@ -96,10 +105,14 @@ public class StationController {
     io.displayCarsName(station, userCarName);
   }
 
+  /** display cars in price range. */
   public void resultCarsPriceRange(PassengerCar[] station, IPriceIO io) {
     io.displayCarsPriceRange(station, startUserPriceNumber, finalUserPriceNumber);
   }
 
+  /**
+   * display car names, cars in price range, cars in fuel cons range.
+   */
   public void resultFilter(
       PassengerCar[] station,
       ICarNameIO carsNameIO,
@@ -119,6 +132,6 @@ public class StationController {
   }
 
   public PassengerCar[] getCollectedCars(IServiceStationCars stationCars) {
-    return stationCars.getCollectedСars();
+    return stationCars.getCollectedCars();
   }
 }

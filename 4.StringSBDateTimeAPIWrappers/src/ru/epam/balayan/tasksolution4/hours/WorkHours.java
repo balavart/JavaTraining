@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 /**
- * implementation with conditions working hours
+ * implementation with conditions working hours.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019

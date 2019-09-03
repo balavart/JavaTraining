@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.cars.sedan;
 import ru.epam.balayan.tasksolution3.task5.cars.classification.Sedan;
 
 /**
- * this class is a child of its car classification
+ * this class is a child of its car classification.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -12,7 +12,7 @@ import ru.epam.balayan.tasksolution3.task5.cars.classification.Sedan;
 public class LexusES extends Sedan {
   private String name = super.getName() + " LexusES";
   private int price = 39750;
-  private double fuelСonsumption = 7.9d;
+  private double fuelConsumption = 7.9d;
 
   @Override
   public String toString() {
@@ -21,13 +21,13 @@ public class LexusES extends Sedan {
         + getPrice()
         + "$"
         + ", fuel consumption: "
-        + getFuelСonsumption()
+        + getFuelConsumption()
         + " L/100 km";
   }
 
   @Override
-  public double getFuelСonsumption() {
-    return fuelСonsumption;
+  public double getFuelConsumption() {
+    return fuelConsumption;
   }
 
   @Override

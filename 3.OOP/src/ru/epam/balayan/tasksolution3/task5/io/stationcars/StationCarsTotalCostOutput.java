@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.io.stationcars;
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 
 /**
- * implementation with conditions station's cars output
+ * implementation with conditions station's cars output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -11,7 +11,7 @@ import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
  */
 public class StationCarsTotalCostOutput implements IStationCarsOutput {
 
-  /** method counts and output car's total cost by fuel consumption */
+  /** method counts and output car's total cost by fuel consumption. */
   @Override
   public void displayStationCars(PassengerCar[] station) {
     int totalCost = 0;

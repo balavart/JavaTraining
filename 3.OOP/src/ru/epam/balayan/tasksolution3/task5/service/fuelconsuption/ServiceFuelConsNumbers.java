@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.service.fuelconsuption;
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 
 /**
- * implementation with conditions fuel consumption numbers
+ * implementation with conditions fuel consumption numbers.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -12,11 +12,11 @@ import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 public class ServiceFuelConsNumbers implements IServiceFuelConsNumbers {
   @Override
   public double getMaxFuelConsumption(PassengerCar[] station) {
-    double max = station[0].getFuelСonsumption();
+    double max = station[0].getFuelConsumption();
 
     for (int i = 0; i < station.length; i++) {
-      if (max < station[i].getFuelСonsumption()) {
-        max = station[i].getFuelСonsumption();
+      if (max < station[i].getFuelConsumption()) {
+        max = station[i].getFuelConsumption();
       }
     }
 
@@ -25,11 +25,11 @@ public class ServiceFuelConsNumbers implements IServiceFuelConsNumbers {
 
   @Override
   public double getMinFuelConsumption(PassengerCar[] station) {
-    double min = station[0].getFuelСonsumption();
+    double min = station[0].getFuelConsumption();
 
     for (int i = 0; i < station.length; i++) {
-      if (min > station[i].getFuelСonsumption()) {
-        min = station[i].getFuelСonsumption();
+      if (min > station[i].getFuelConsumption()) {
+        min = station[i].getFuelConsumption();
       }
     }
 

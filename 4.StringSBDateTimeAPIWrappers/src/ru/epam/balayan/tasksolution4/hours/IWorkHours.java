@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution4.hours;
 import java.time.LocalDateTime;
 
 /**
- * interface for getting working hours
+ * interface for getting working hours.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
@@ -11,16 +11,16 @@ import java.time.LocalDateTime;
  */
 public interface IWorkHours {
 
-  /** @return remaining or past working hours of all day sinse the first day */
+  /** get remaining or past working hours of all day sinse the first day. */
   long getBalanceHours(
       short[] hours, long fullWorkDaysHours, short firstWorkDayHours, short endWorkDayHours);
 
-  /** @return working hours of the end day */
+  /** get working hours of the end day. */
   short getEndWorkDayHours(LocalDateTime endDate);
 
-  /** @return working hours of the first day */
+  /** get working hours of the first day. */
   short getFirstWorkDayHours(LocalDateTime startDate);
 
-  /** @return the working hours of days between the first and last day */
+  /** get the working hours of days between the first and last day. */
   long getFullWorkDaysHours(LocalDateTime startDate, LocalDateTime endDate);
 }

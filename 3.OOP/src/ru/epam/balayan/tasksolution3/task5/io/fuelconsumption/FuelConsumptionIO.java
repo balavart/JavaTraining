@@ -1,12 +1,12 @@
 package ru.epam.balayan.tasksolution3.task5.io.fuelconsumption;
 
-import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
+
 /**
- * implementation with conditions fuel input and cars output
+ * implementation with conditions fuel input and cars output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -32,8 +32,8 @@ public class FuelConsumptionIO implements IFuelConsumptionIO {
             + " L/100 km: ");
 
     for (int i = 0; i < station.length; i++) {
-      if ((startFuelCons <= station[i].getFuelСonsumption())
-          && (finalFuelCons >= station[i].getFuelСonsumption())) {
+      if ((startFuelCons <= station[i].getFuelConsumption())
+          && (finalFuelCons >= station[i].getFuelConsumption())) {
         System.out.println(station[i]);
         carNumAvaible++;
       }

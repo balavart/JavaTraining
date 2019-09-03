@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * interface for getting starting and final dates
+ * interface for getting starting and final dates.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
@@ -12,9 +12,9 @@ import java.time.format.DateTimeFormatter;
  */
 public interface IWorkDates {
 
-  /** @return current date */
+  /** get current date. */
   LocalDateTime getEndDate();
 
-  /** @return the start formatted date of the student task */
+  /** get the start formatted date of the student task. */
   LocalDateTime getStartDate(String taskDate, DateTimeFormatter formatter);
 }

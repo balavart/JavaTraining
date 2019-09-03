@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.cars.sedan;
 import ru.epam.balayan.tasksolution3.task5.cars.classification.Sedan;
 
 /**
- * this class is a child of its car classification
+ * this class is a child of its car classification.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -12,7 +12,7 @@ import ru.epam.balayan.tasksolution3.task5.cars.classification.Sedan;
 public class PorschePanameraTurbo extends Sedan {
   private String name = super.getName() + " Porsche Panamera Turbo";
   private int price = 88850;
-  private double fuelСonsumption = 9.4d;
+  private double fuelConsumption = 9.4d;
 
   @Override
   public String toString() {
@@ -21,13 +21,13 @@ public class PorschePanameraTurbo extends Sedan {
         + getPrice()
         + "$"
         + ", fuel consumption: "
-        + getFuelСonsumption()
+        + getFuelConsumption()
         + " L/100 km";
   }
 
   @Override
-  public double getFuelСonsumption() {
-    return fuelСonsumption;
+  public double getFuelConsumption() {
+    return fuelConsumption;
   }
 
   @Override
