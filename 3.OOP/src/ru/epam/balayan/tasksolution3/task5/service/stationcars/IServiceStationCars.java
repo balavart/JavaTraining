@@ -12,9 +12,5 @@ import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 public interface IServiceStationCars {
 
   /** get tempCarsArr array of cars. */
-<<<<<<< HEAD
   PassengerCar[] getCollectedCars();
-=======
-  PassengerCar[] getCollectedСars();
->>>>>>> 2f4689860d3cd78b7d8168395df3737a3d75e956
 }
