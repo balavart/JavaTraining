@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.io.stationcars;
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 
 /**
- * implementation with conditions station's cars output
+ * implementation with conditions station's cars output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019

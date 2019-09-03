@@ -1,8 +1,8 @@
 package ru.epam.balayan.tasksolution2.a;
 
 /**
- * this is a POJO class for encapsulation are used private fields, getters and setters some Object
- * methods are also overridden this class also implements Comparable and overrides "compareTo"
+ * this is a POJO class for encapsulation are used private fields, getters and setters some Object.
+ * methods are also overridden this class also implements Comparable and overrides "compareTo".
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/22/2019

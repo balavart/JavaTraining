@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 /**
- * implementation with conditions working hours
+ * implementation with conditions working hours.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
@@ -15,7 +15,7 @@ public class WorkHours implements IWorkHours {
   public static final short END_WORKDAY_HOURS = 18; // 18:00
   public static final short WORK_HOURS = (short) (END_WORKDAY_HOURS - START_WORKDAY_HOURS);
 
-  /** declared conditions for throwing exceptions */
+  /** declared conditions for throwing exceptions. */
   @Override
   public long getBalanceHours(
       short[] courseHours, long fullWorkDaysHours, short firstWorkDayHours, short endWorkDayHours) {
@@ -35,7 +35,7 @@ public class WorkHours implements IWorkHours {
     return balanceHours;
   }
 
-  /** declared conditions for throwing exceptions */
+  /** declared conditions for throwing exceptions. */
   @Override
   public short getEndWorkDayHours(LocalDateTime endDate) {
     if (endDate == null) {
@@ -55,7 +55,7 @@ public class WorkHours implements IWorkHours {
     return hoursResult;
   }
 
-  /** declared conditions for throwing exceptions */
+  /** declared conditions for throwing exceptions. */
   @Override
   public short getFirstWorkDayHours(LocalDateTime startDate) {
     if (startDate == null) {
@@ -75,7 +75,7 @@ public class WorkHours implements IWorkHours {
     return hoursResult;
   }
 
-  /** declared conditions for throwing exceptions */
+  /** declared conditions for throwing exceptions. */
   @Override
   public long getFullWorkDaysHours(LocalDateTime startDate, LocalDateTime endDate) {
     if (startDate == null) {

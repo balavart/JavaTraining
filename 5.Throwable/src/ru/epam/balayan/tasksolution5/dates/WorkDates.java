@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 
 /**
- * implementation with conditions the starting and final dates
+ * implementation with conditions the starting and final dates.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
@@ -20,7 +20,7 @@ public class WorkDates implements IWorkDates {
     return endDate;
   }
 
-  /** declared conditions for throwing exceptions */
+  /** declared conditions for throwing exceptions. */
   @Override
   public LocalDateTime getStartDate(String taskDate, DateTimeFormatter formatter) {
     if (taskDate == null) {
@@ -64,3 +64,5 @@ public class WorkDates implements IWorkDates {
     return startDate;
   }
 }
+
+// ~ Formatted by Jindent --- http://www.jindent.com

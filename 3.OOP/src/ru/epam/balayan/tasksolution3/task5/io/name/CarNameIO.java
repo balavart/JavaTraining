@@ -1,13 +1,13 @@
 package ru.epam.balayan.tasksolution3.task5.io.name;
 
-import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
 
+import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
+
 /**
- * implementation with conditions car name input and cars output
+ * implementation with conditions car name input and cars output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * implementation with conditions the starting and final dates
+ * implementation with conditions the starting and final dates.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019

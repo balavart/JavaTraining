@@ -1,7 +1,9 @@
 package ru.epam.balayan.tasksolution3.task5.service.stationcars;
 
+import java.util.Random;
+
 import ru.epam.balayan.tasksolution3.task5.cars.cabriolet.AudiS5;
-import ru.epam.balayan.tasksolution3.task5.cars.cabriolet.MINICabrio;
+import ru.epam.balayan.tasksolution3.task5.cars.cabriolet.MiniCabrio;
 import ru.epam.balayan.tasksolution3.task5.cars.cabriolet.OpelCascada;
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 import ru.epam.balayan.tasksolution3.task5.cars.limousine.Chrysler300;
@@ -11,10 +13,8 @@ import ru.epam.balayan.tasksolution3.task5.cars.sedan.LexusES;
 import ru.epam.balayan.tasksolution3.task5.cars.sedan.PorschePanameraTurbo;
 import ru.epam.balayan.tasksolution3.task5.cars.sedan.ToyotaCorolla;
 
-import java.util.Random;
-
 /**
- * implementation with conditions car's array
+ * implementation with conditions car's array.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -22,7 +22,7 @@ import java.util.Random;
  */
 public class ServiceStationCars implements IServiceStationCars {
 
-  /** method add an randomly filled object array */
+  /** method add an randomly filled object array. */
   @Override
   public PassengerCar[] getCollectedСars() {
     PassengerCar[] tempCarsArr = new PassengerCar[20];
@@ -44,7 +44,7 @@ public class ServiceStationCars implements IServiceStationCars {
           tempCarsArr[i] = new AudiS5();
           break;
         case 4:
-          tempCarsArr[i] = new MINICabrio();
+          tempCarsArr[i] = new MiniCabrio();
           break;
         case 5:
           tempCarsArr[i] = new OpelCascada();

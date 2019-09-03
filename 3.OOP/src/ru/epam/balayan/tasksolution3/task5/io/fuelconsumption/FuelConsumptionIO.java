@@ -1,12 +1,12 @@
 package ru.epam.balayan.tasksolution3.task5.io.fuelconsumption;
 
-import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 
+import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
+
 /**
- * implementation with conditions fuel input and cars output
+ * implementation with conditions fuel input and cars output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019

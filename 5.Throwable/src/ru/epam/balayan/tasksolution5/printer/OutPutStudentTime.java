@@ -1,13 +1,13 @@
 package ru.epam.balayan.tasksolution5.printer;
 
-import ru.epam.balayan.tasksolution5.hours.WorkHours;
-
 import java.time.DateTimeException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+import ru.epam.balayan.tasksolution5.hours.WorkHours;
+
 /**
- * implementation with conditions date times output
+ * implementation with conditions date times output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
  */
 public class OutPutStudentTime implements IPrinterDatetime {
 
-  /** declared conditions for throwing exceptions */
+  /** declared conditions for throwing exceptions. */
   @Override
   public void outPutDates(
       LocalDateTime startDate, LocalDateTime endDate, DateTimeFormatter formatter) {
@@ -46,7 +46,7 @@ public class OutPutStudentTime implements IPrinterDatetime {
     System.out.println(dates);
   }
 
-  /** declared conditions for throwing exceptions */
+  /** declared conditions for throwing exceptions. */
   @Override
   public void outPutDatetimeResult(long balanceHours, String studentName, String curricullum) {
     if ((studentName == null) || (studentName.charAt(0) == ' ') || studentName.contains("  ")) {

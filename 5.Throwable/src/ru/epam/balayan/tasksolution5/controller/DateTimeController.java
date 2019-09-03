@@ -1,27 +1,30 @@
 package ru.epam.balayan.tasksolution5.controller;
 
+import java.time.DateTimeException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import ru.epam.balayan.tasksolution5.dates.IWorkDates;
 import ru.epam.balayan.tasksolution5.hours.IWorkHours;
 import ru.epam.balayan.tasksolution5.printer.IPrinterDatetime;
 import ru.epam.balayan.tasksolution5.students.Student;
 
-import java.time.DateTimeException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 /**
- * this class is a controller between interfaces /is created on 8/31/2019
+ * this class is a controller between interfaces.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
  */
 public class DateTimeController {
-  private LocalDateTime startDate, endDate;
-  private long fullWorkDaysHours, balanceHours;
-  private short firstWorkDayHours, endWorkDayHours;
+  private LocalDateTime startDate;
+  private LocalDateTime endDate;
+  private long fullWorkDaysHours;
+  private long balanceHours;
+  private short firstWorkDayHours;
+  private short endWorkDayHours;
 
   /**
-   * initializes all fields, calling all interfaces constructor is used to quickly call objects
+   * initializes all fields, calling all interfaces constructor is used to quickly call objects.
    * exception handling declared
    */
   public DateTimeController(
@@ -50,7 +53,7 @@ public class DateTimeController {
   }
 
   /**
-   * student's task date time and current date time output remaining or past date time output
+   * student's task date time and current date time output remaining or past date time output.
    * exception handling declared
    */
   public void outPutTimeResult(

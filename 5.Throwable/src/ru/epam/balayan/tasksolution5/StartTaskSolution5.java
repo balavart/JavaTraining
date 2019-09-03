@@ -1,5 +1,7 @@
 package ru.epam.balayan.tasksolution5;
 
+import java.time.format.DateTimeFormatter;
+
 import ru.epam.balayan.tasksolution5.controller.DateTimeController;
 import ru.epam.balayan.tasksolution5.dates.IWorkDates;
 import ru.epam.balayan.tasksolution5.dates.WorkDates;
@@ -9,22 +11,21 @@ import ru.epam.balayan.tasksolution5.printer.IPrinterDatetime;
 import ru.epam.balayan.tasksolution5.printer.OutPutStudentTime;
 import ru.epam.balayan.tasksolution5.students.Student;
 
-import java.time.format.DateTimeFormatter;
-
 /**
- * this app is a solution for EPAM Java Training homework № 4 this is main starting app class
+ * this app is a solution for EPAM Java Training homework № 4 this is main starting app class.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
  */
 public class StartTaskSolution5 {
+  /** start app. */
   public static void main(String[] args) {
     StartTaskSolution5 taskSolution5 = new StartTaskSolution5();
 
     taskSolution5.startApp();
   }
 
-  /** method for quickly creating and executing objects */
+  /** method for quickly creating and executing objects. */
   private void startApp() {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm");
     Student ivanov =

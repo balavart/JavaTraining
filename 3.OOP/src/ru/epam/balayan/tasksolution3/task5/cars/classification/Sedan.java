@@ -6,7 +6,7 @@ import ru.epam.balayan.tasksolution3.task5.cars.sedan.PorschePanameraTurbo;
 import ru.epam.balayan.tasksolution3.task5.cars.sedan.ToyotaCorolla;
 
 /**
- * this abstract class is the parent class for cars of this classification
+ * this abstract class is the parent class for cars of this classification.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
