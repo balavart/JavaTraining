@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.cars.limousine;
 import ru.epam.balayan.tasksolution3.task5.cars.classification.Limousine;
 
 /**
- * this class is a child of its car classification
+ * this class is a child of its car classification.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019

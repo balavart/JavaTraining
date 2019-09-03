@@ -1,13 +1,12 @@
 package ru.epam.balayan.tasksolution2.a.service;
 
-import ru.epam.balayan.tasksolution2.a.Dwarf;
-
 import java.util.Random;
 import java.util.TreeSet;
 
+import ru.epam.balayan.tasksolution2.a.Dwarf;
+
 /**
- * this is a model class is used as an additional class for creating POJO class objects main logic
- * is in here
+ * this is a model class is used as an additional class for creating POJO class objects.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/22/2019
@@ -17,7 +16,7 @@ public class ServiceDwarf {
 
   /**
    * this inner Enum contains 5 objects with random field values generates a random field numbers
-   * and selects random string values
+   * and selects random string values.
    */
   enum DwarfClasses {
     PALADIN((int) (Math.random() * 5)),
@@ -43,7 +42,7 @@ public class ServiceDwarf {
   }
 
   /**
-   * method creates an array of objects and assigns values​from Enum
+   * method creates an array of objects and assigns values​from Enum.
    *
    * @return dwarf object array
    */
@@ -60,9 +59,9 @@ public class ServiceDwarf {
   }
 
   /**
-   * method takes as an parameter an array and display a string representation of objects
+   * method takes as an parameter an array and display a string representation of objects.
    *
-   * @param dwarves - object array
+   * @param dwarves object array
    */
   public void objDisplay(Dwarf[] dwarves) {
     System.out.println("The array of objects: ");
@@ -73,9 +72,9 @@ public class ServiceDwarf {
   }
 
   /**
-   * method takes as an parameter an array
+   * method takes as an parameter an array.
    *
-   * @param dwarves - object array
+   * @param dwarves object array
    * @return newDwarfArr.length - the number of equivalent array objects
    */
   public int quivalentObjNum(Dwarf[] dwarves) {

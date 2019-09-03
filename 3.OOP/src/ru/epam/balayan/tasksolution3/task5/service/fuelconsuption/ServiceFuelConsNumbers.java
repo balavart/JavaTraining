@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.service.fuelconsuption;
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 
 /**
- * implementation with conditions fuel consumption numbers
+ * implementation with conditions fuel consumption numbers.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019

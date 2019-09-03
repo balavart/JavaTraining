@@ -3,11 +3,10 @@ package ru.epam.balayan.tasksolution;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
 import java.util.Arrays;
 
 /**
- * this is main starting app class this app is a solution for EPAM Java Training homework № 1
+ * this is main starting app class this app is a solution for EPAM Java Training homework № 1.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/18/2019
@@ -18,7 +17,7 @@ public class StartTaskSolution1 {
   private static int[] primaryArray;
 
   /**
-   * method creates an array with random elements from -10 to 10 is a solution for task option № 1
+   * method creates an array with random elements from -10 to 10 is a solution for task option № 1.
    */
   void addArray() {
     primaryArray = new int[20];
@@ -33,7 +32,7 @@ public class StartTaskSolution1 {
 
   /**
    * method displays strings whose length is longer the average and their length is a solution for
-   * task option № 2.2
+   * task option № 2.2.
    *
    * @see StartTaskSolution1#inputStrCount()
    */
@@ -73,11 +72,11 @@ public class StartTaskSolution1 {
 
   /**
    * method displays strings whose length is shorter the average and their length is a solution for
-   * task option № 2.3
+   * task option № 2.3.
    *
    * @see StartTaskSolution1#inputStrCount()
    */
-  void averageShorter() {
+  private void averageShorter() {
     int average = 0;
 
     inputStrCount();
@@ -111,8 +110,8 @@ public class StartTaskSolution1 {
     System.out.print("\n");
   }
 
-  /** method closes keyboard input stream */
-  void closeBufReadStream() {
+  /** method closes keyboard input stream. */
+  private void closeBufReadStream() {
     try {
       reader.close();
     } catch (IOException e) {
@@ -122,9 +121,7 @@ public class StartTaskSolution1 {
 
   /**
    * method in integers array find The difference between the minimum element value and the
-   * arithmetic mean value is a solution for task option № 1.5
-   *
-   * @param array
+   * arithmetic mean value. is a solution for task option № 1.5
    */
   void differenceFind(int[] array) {
     double average = 0;
@@ -151,12 +148,12 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method find the first specified word consisting various characters is a solution for task
+   * method find the first specified word consisting various characters. is a solution for task
    * option № 2.5
    *
    * @see StartTaskSolution1#inputStrCount()
    */
-  void differentChars() {
+  private void differentChars() {
     inputStrCount();
 
     String[] text = new String[countStr];
@@ -188,11 +185,11 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method for assigning string counts some methods use this method
+   * method for assigning string counts some methods use this method.
    *
    * @see StartTaskSolution1#isDigit(java.lang.String)
    */
-  void inputStrCount() {
+  private void inputStrCount() {
     boolean digit = false;
     String str = null;
 
@@ -212,6 +209,7 @@ public class StartTaskSolution1 {
     }
   }
 
+  /** starting app. */
   public static void main(String[] args) {
     StartTaskSolution1 solution = new StartTaskSolution1();
 
@@ -219,7 +217,7 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method find the first specified word the number of different characters is minimal is a
+   * method find the first specified word the number of different characters is minimal. is a
    * solution for task option № 2.4
    *
    * @see StartTaskSolution1#inputStrCount()
@@ -274,11 +272,11 @@ public class StartTaskSolution1 {
 
   /**
    * method find the specified word, consisting of numbers only or the second word after the first
-   * counter is a solution for task option № 2.6
+   * counter. is a solution for task option № 2.6
    *
    * @see StartTaskSolution1#inputStrCount()
    */
-  void onlyDigitsFind() {
+  private void onlyDigitsFind() {
     inputStrCount();
 
     String[] text = new String[countStr];
@@ -309,7 +307,8 @@ public class StartTaskSolution1 {
     for (int i = 0; i < text.length; i++) {
       if (text[i].equals(strArr[i])) {
         System.out.println(
-            "The specified word consisting of numbers only or the second word after the first counter: "
+            "The specified word consisting of numbers only"
+                + " or the second word after the first counter: "
                 + "\""
                 + text[i]
                 + "\"");
@@ -324,12 +323,10 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method in integers array repeat array numbers of odd indices is a solution for task option №
+   * method in integers array repeat array numbers of odd indices. is a solution for task option №
    * 1.6
-   *
-   * @param array
    */
-  void repeatElements(int[] array) {
+  private void repeatElements(int[] array) {
     System.out.print("Repeat array numbers of odd indices: " + "\n");
 
     for (int i = 0; i < array.length; i++) {
@@ -346,12 +343,12 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method finds the shortest and longest strings and displays this strings and their length is a
+   * method finds the shortest and longest strings and displays this strings and their length. is a
    * solution for task option № 2.1
    *
    * @see StartTaskSolution1#inputStrCount()
    */
-  void shortLongLengthFind() {
+  private void shortLongLengthFind() {
     String shortStr = null;
     String longStr = null;
     String text = null;
@@ -383,7 +380,7 @@ public class StartTaskSolution1 {
     System.out.print("\n");
   }
 
-  /** method starting other app methods */
+  /** method starting other app methods. */
   void startApp() {
     addArray();
     switchElements(primaryArray.clone());
@@ -402,12 +399,10 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method in integers array determines sum of elements of even positions is a solution for task
+   * method in integers array determines sum of elements of even positions. is a solution for task
    * option № 1.2
-   *
-   * @param array
    */
-  void sumElements(int[] array) {
+  private void sumElements(int[] array) {
     int sum = 0;
 
     for (int i = 0; i < array.length; i++) {
@@ -420,12 +415,10 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method in integers array swaps the maximum negative element and the minimum positive is a
+   * method in integers array swaps the maximum negative element and the minimum positive. is a
    * solution for task option № 1.1
-   *
-   * @param array
    */
-  void switchElements(int[] array) {
+  private void switchElements(int[] array) {
     int minPosElement = 0;
     int maxNegElement = 0;
 
@@ -469,12 +462,10 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method in integers array tripling positive element in front of a negative element is a solution
-   * for task option № 1.4
-   *
-   * @param array
+   * method in integers array tripling positive element in front of a negative element. is a
+   * solution for task option № 1.4
    */
-  void tripleElements(int[] array) {
+  private void tripleElements(int[] array) {
     for (int i = 0; i < array.length; i++) {
       if (array[i] < 0) {
         if ((i != 0) && (array[i - 1] > 0)) {
@@ -490,12 +481,8 @@ public class StartTaskSolution1 {
             + "\n");
   }
 
-  /**
-   * method in integers array zeroing negative elements is a solution for task option № 1.3
-   *
-   * @param array
-   */
-  void zeroReplace(int[] array) {
+  /** method in integers array zeroing negative elements. is a solution for task option № 1.3. */
+  private void zeroReplace(int[] array) {
     for (int i = 0; i < array.length; i++) {
       if (array[i] < 0) {
         array[i] = 0;
@@ -506,10 +493,10 @@ public class StartTaskSolution1 {
   }
 
   /**
-   * method is used to check the conditions for entering numbers in the input stream some methods
+   * method is used to check the conditions for entering numbers in the input stream. some methods
    * use this method
    */
-  boolean isDigit(String string) {
+  private boolean isDigit(String string) {
     if (string.isEmpty()) {
       return false;
     }

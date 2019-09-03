@@ -1,10 +1,10 @@
-package ru.epam.balayan.tasksolution2.b.gunClasses;
+package ru.epam.balayan.tasksolution2.b.gunclasses;
 
 import ru.epam.balayan.tasksolution2.b.contract.Shootable;
 
 /**
  * this is implement Shootable class it describes the weapon rate of fire some Object methods of the
- * class are overridden
+ * class are overridden.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/23/2019
@@ -15,7 +15,7 @@ public class HK416 implements Shootable {
   private double clipEnough = 0;
 
   /**
-   * overriding Object method for more accurate objects comparison
+   * overriding Object method for more accurate objects comparison.
    *
    * @return logical comparison
    */
@@ -37,7 +37,7 @@ public class HK416 implements Shootable {
   }
 
   /**
-   * overriding Shootable method describes the weapon rate of fire
+   * overriding Shootable method describes the weapon rate of fire.
    *
    * @see Shootable#shoot()
    */
@@ -54,7 +54,7 @@ public class HK416 implements Shootable {
   }
 
   /**
-   * overriding Object method
+   * overriding Object method.
    *
    * @return class name
    */

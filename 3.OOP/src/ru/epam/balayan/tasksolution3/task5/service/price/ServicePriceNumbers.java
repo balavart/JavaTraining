@@ -3,7 +3,7 @@ package ru.epam.balayan.tasksolution3.task5.service.price;
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 
 /**
- * implementation with conditions price numbers
+ * implementation with conditions price numbers.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019

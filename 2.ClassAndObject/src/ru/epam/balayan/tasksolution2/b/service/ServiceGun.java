@@ -1,15 +1,15 @@
 package ru.epam.balayan.tasksolution2.b.service;
 
-import ru.epam.balayan.tasksolution2.b.contract.Shootable;
-import ru.epam.balayan.tasksolution2.b.gunClasses.AK12;
-import ru.epam.balayan.tasksolution2.b.gunClasses.HK416;
-
 import java.util.Arrays;
 import java.util.Random;
 
+import ru.epam.balayan.tasksolution2.b.contract.Shootable;
+import ru.epam.balayan.tasksolution2.b.gunclasses.AK12;
+import ru.epam.balayan.tasksolution2.b.gunclasses.HK416;
+
 /**
  * this is a model class this class is used as an additional class for creating gun class objects
- * main logic is in here
+ * main logic is in here.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/23/2019
@@ -19,7 +19,7 @@ import java.util.Random;
 public class ServiceGun {
 
   /**
-   * method add an randomly filled object array
+   * method add an randomly filled object array.
    *
    * @return guns
    */
@@ -41,6 +41,9 @@ public class ServiceGun {
           obj = new HK416();
 
           break;
+
+        default:
+          break;
       }
 
       guns[i] = (Shootable) obj;
@@ -50,13 +53,12 @@ public class ServiceGun {
   }
 
   /**
-   * method add wo-dimensional objects array each subarray is filled by objects certain class
+   * method add wo-dimensional objects array each subarray is filled by objects certain class.
    *
    * @param paramArr object array
    * @return two-dimensional objects array
    */
   public Shootable[][] addShootableArrArr(Shootable[] paramArr) {
-    Shootable[][] gunsArrArr = null;
     int akCount = 0;
     int hkCount = 0;
 
@@ -84,12 +86,12 @@ public class ServiceGun {
       hk416Arr[i] = new HK416();
     }
 
-    gunsArrArr = new Shootable[][] {ak12Arr, hk416Arr};
+    Shootable[][] gunsArrArr = new Shootable[][] {ak12Arr, hk416Arr};
 
     return gunsArrArr;
   }
 
-  /** method display each separate array contains objects certain class */
+  /** method display each separate array contains objects certain class. */
   public void displayShootableArrArr() {
     Shootable[] displayArr = addShootableArr();
     Shootable[][] displayArrArr = addShootableArrArr(displayArr);

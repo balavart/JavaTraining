@@ -1,25 +1,28 @@
 package ru.epam.balayan.tasksolution4.controller;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import ru.epam.balayan.tasksolution4.dates.IWorkDates;
 import ru.epam.balayan.tasksolution4.hours.IWorkHours;
 import ru.epam.balayan.tasksolution4.printer.IPrinterDatetime;
 import ru.epam.balayan.tasksolution4.students.Student;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 /**
- * this class is a controller between interfaces
+ * this class is a controller between interfaces.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
  */
 public class DateTimeController {
-  private LocalDateTime startDate, endDate;
-  private long fullWorkDaysHours, balanceHours;
-  private short firstWorkDayHours, endWorkDayHours;
+  private LocalDateTime startDate;
+  private LocalDateTime endDate;
+  private long fullWorkDaysHours;
+  private long balanceHours;
+  private short firstWorkDayHours;
+  private short endWorkDayHours;
 
-  /** initializes all fields, calling all interfaces constructor is used to quickly call objects */
+  /** initializes all fields, calling all interfaces constructor is used to quickly call objects. */
   public DateTimeController(
       IWorkDates workDates, IWorkHours workHours, Student student, DateTimeFormatter formatter) {
     this.startDate = workDates.getStartDate(student.getTaskDate(), formatter);
@@ -32,7 +35,7 @@ public class DateTimeController {
             student.getCourseHours(), fullWorkDaysHours, firstWorkDayHours, endWorkDayHours);
   }
 
-  /** student's task date time and current date time output remaining or past date time output */
+  /** student's task date time and current date time output remaining or past date time output. */
   public void outPutTimeResult(
       IPrinterDatetime outPut, Student student, DateTimeFormatter formatter) {
     outPut.outPutDatetimeResult(balanceHours, student.getName(), student.getCurricullum());
