@@ -5,4 +5,6 @@ out/
 /.idea/checkstyle-idea.xml
 /.idea/google-java-format.xml
 /.idea/checkstyleidea-libs/
+/.idea/inspectionProfiles/
 /.idea/codeStyles/
+/.idea/checkstyleidea.tmp/

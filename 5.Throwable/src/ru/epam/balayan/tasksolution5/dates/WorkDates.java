@@ -64,5 +64,3 @@ public class WorkDates implements IWorkDates {
     return startDate;
   }
 }
-
-// ~ Formatted by Jindent --- http://www.jindent.com

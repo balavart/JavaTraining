@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  */
 public interface IWorkHours {
 
-  /** get remaining or past working hours of all day sinse the first day. */
+  /** get remaining or past working hours of all day since the first day. */
   long getBalanceHours(
       short[] hours, long fullWorkDaysHours, short firstWorkDayHours, short endWorkDayHours);
 

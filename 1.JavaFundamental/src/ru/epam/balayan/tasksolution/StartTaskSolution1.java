@@ -16,6 +16,13 @@ public class StartTaskSolution1 {
   private static int countStr = 0;
   private static int[] primaryArray;
 
+  /** starting app. */
+  public static void main(String[] args) {
+    StartTaskSolution1 solution = new StartTaskSolution1();
+
+    solution.startApp();
+  }
+
   /**
    * method creates an array with random elements from -10 to 10 is a solution for task option № 1.
    */
@@ -207,13 +214,6 @@ public class StartTaskSolution1 {
         e.getMessage();
       }
     }
-  }
-
-  /** starting app. */
-  public static void main(String[] args) {
-    StartTaskSolution1 solution = new StartTaskSolution1();
-
-    solution.startApp();
   }
 
   /**

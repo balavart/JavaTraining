@@ -31,11 +31,6 @@ import ru.epam.balayan.tasksolution3.task5.station.TaxiStation;
  * @version 1.8 creation date 8/26/2019
  */
 class StartTaskSolution3 implements AutoCloseable {
-  @Override
-  public void close() {
-    System.out.println("End of program.");
-  }
-
   public static void main(String[] args) {
     try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
       StartTaskSolution3 taskSolution3 = new StartTaskSolution3();
@@ -44,6 +39,11 @@ class StartTaskSolution3 implements AutoCloseable {
     } catch (IOException e) {
       e.printStackTrace();
     }
+  }
+
+  @Override
+  public void close() {
+    System.out.println("End of program.");
   }
 
   /** method for quickly creating and executing objects. */

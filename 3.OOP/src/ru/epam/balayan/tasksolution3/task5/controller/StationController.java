@@ -27,7 +27,6 @@ public class StationController {
   private double finalUserFuelConsNum;
 
   public StationController() {
-
   }
 
   /**
@@ -110,9 +109,7 @@ public class StationController {
     io.displayCarsPriceRange(station, startUserPriceNumber, finalUserPriceNumber);
   }
 
-  /**
-   * display car names, cars in price range, cars in fuel cons range.
-   */
+  /** display car names, cars in price range, cars in fuel cons range. */
   public void resultFilter(
       PassengerCar[] station,
       ICarNameIO carsNameIO,

@@ -17,7 +17,7 @@ public class Student {
    * for init student fields.
    *
    * @param name user name
-   * @param curricullum user cutticulum
+   * @param curricullum user curriculum
    * @param taskDate user task date in date format
    * @param courseHours hours of all the courses
    */
@@ -28,19 +28,19 @@ public class Student {
     this.courseHours = courseHours;
   }
 
-  public String getName() {
-    return name;
+  public short[] getCourseHours() {
+    return courseHours;
   }
 
   public String getCurricullum() {
     return curricullum;
   }
 
-  public String getTaskDate() {
-    return taskDate;
+  public String getName() {
+    return name;
   }
 
-  public short[] getCourseHours() {
-    return courseHours;
+  public String getTaskDate() {
+    return taskDate;
   }
 }

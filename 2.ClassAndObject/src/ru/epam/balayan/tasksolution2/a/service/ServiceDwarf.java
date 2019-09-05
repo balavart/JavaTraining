@@ -15,33 +15,6 @@ import ru.epam.balayan.tasksolution2.a.Dwarf;
 public class ServiceDwarf {
 
   /**
-   * this inner Enum contains 5 objects with random field values generates a random field numbers
-   * and selects random string values.
-   */
-  enum DwarfClasses {
-    PALADIN((int) (Math.random() * 5)),
-    WARRIOR((int) (Math.random() * 5)),
-    HUNTER((int) (Math.random() * 5)),
-    ROGUE((int) (Math.random() * 5)),
-    MONK((int) (Math.random() * 5));
-
-    String personName = null;
-    int strengthLevel = 0;
-    String[] names = {
-      "Vardvin",
-      "Muradin Bronzebeard",
-      "Falstad Wildhammer",
-      "Brymidaine Zecker",
-      "Thargas Anvilmar"
-    };
-
-    DwarfClasses(int strengthLevel) {
-      this.personName = names[(new Random().nextInt(names.length))];
-      this.strengthLevel = strengthLevel;
-    }
-  }
-
-  /**
    * method creates an array of objects and assigns values​from Enum.
    *
    * @return dwarf object array
@@ -114,5 +87,32 @@ public class ServiceDwarf {
     System.out.println("The number of equivalent objects: " + newDwarfArr.length);
 
     return newDwarfArr.length;
+  }
+
+  /**
+   * this inner Enum contains 5 objects with random field values generates a random field numbers
+   * and selects random string values.
+   */
+  enum DwarfClasses {
+    PALADIN((int) (Math.random() * 5)),
+    WARRIOR((int) (Math.random() * 5)),
+    HUNTER((int) (Math.random() * 5)),
+    ROGUE((int) (Math.random() * 5)),
+    MONK((int) (Math.random() * 5));
+
+    String personName = null;
+    int strengthLevel = 0;
+    String[] names = {
+      "Vardvin",
+      "Muradin Bronzebeard",
+      "Falstad Wildhammer",
+      "Brymidaine Zecker",
+      "Thargas Anvilmar"
+    };
+
+    DwarfClasses(int strengthLevel) {
+      this.personName = names[(new Random().nextInt(names.length))];
+      this.strengthLevel = strengthLevel;
+    }
   }
 }
