@@ -12,16 +12,14 @@ import ru.epam.balayan.tasksolution5.printer.OutPutStudentTime;
 import ru.epam.balayan.tasksolution5.students.Student;
 
 /**
- * this app is a solution for EPAM Java Training homework № 4 this is main starting app class.
+ * This app is a solution for EPAM Java Training homework № 5. This is main starting app class.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
  */
 public class StartTaskSolution5 {
-  /** start app. */
   public static void main(String[] args) {
     StartTaskSolution5 taskSolution5 = new StartTaskSolution5();
-
     taskSolution5.startApp();
   }
 

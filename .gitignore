@@ -1,10 +1,7 @@
-.idea/**/workspace.xml
-.idea/**/uiDesigner.xml
-/.idea/vcs.xml
+*.iml
+.idea/
+*.ipr
+*.iws
 out/
-/.idea/checkstyle-idea.xml
-/.idea/google-java-format.xml
-/.idea/checkstyleidea-libs/
-/.idea/inspectionProfiles/
-/.idea/codeStyles/
+.idea_modules/
 /.idea/checkstyleidea.tmp/

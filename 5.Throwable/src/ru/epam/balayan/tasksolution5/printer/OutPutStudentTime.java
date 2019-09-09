@@ -51,14 +51,14 @@ public class OutPutStudentTime implements IPrinterDatetime {
   public void outPutDatetimeResult(long balanceHours, String studentName, String curricullum) {
     if ((studentName == null) || (studentName.charAt(0) == ' ') || studentName.contains("  ")) {
       throw new NullPointerException("No data in student name! Indicate name.");
-    } else if (studentName.chars().allMatch(x -> Character.isDigit(x))) {
+    } else if (studentName.chars().allMatch(Character::isDigit)) {
       throw new IllegalArgumentException(
           "Student name contains an invalid format! Use another string format.");
     }
 
     if ((curricullum == null) || (curricullum.charAt(0) == ' ') || curricullum.contains("  ")) {
       throw new NullPointerException("No data in curricullum! Indicate curricullum.");
-    } else if (curricullum.chars().allMatch(x -> Character.isDigit(x))) {
+    } else if (curricullum.chars().allMatch(Character::isDigit)) {
       throw new IllegalArgumentException(
           "Curricullum contains an invalid format! Use another string format.");
     }

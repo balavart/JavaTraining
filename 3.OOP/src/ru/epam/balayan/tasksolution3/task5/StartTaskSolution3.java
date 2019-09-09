@@ -24,8 +24,8 @@ import ru.epam.balayan.tasksolution3.task5.service.stationcars.ServiceStationCar
 import ru.epam.balayan.tasksolution3.task5.station.TaxiStation;
 
 /**
- * this app is a solution for EPAM Java Training homework № 3, task 5.Taxi station this is main
- * starting app class
+ * this app is a solution for EPAM Java Training homework № 3, task 5.Taxi station. This is main
+ * starting app class.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
@@ -34,7 +34,6 @@ class StartTaskSolution3 implements AutoCloseable {
   public static void main(String[] args) {
     try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
       StartTaskSolution3 taskSolution3 = new StartTaskSolution3();
-
       taskSolution3.startApp(reader);
     } catch (IOException e) {
       e.printStackTrace();
