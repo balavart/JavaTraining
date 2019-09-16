@@ -10,7 +10,7 @@ import ru.epam.balayan.tasksolution5.printer.IPrinterDatetime;
 import ru.epam.balayan.tasksolution5.students.Student;
 
 /**
- * this class is a controller between interfaces.
+ * This class is a controller between interfaces.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
@@ -24,8 +24,8 @@ public class DateTimeController {
   private short endWorkDayHours;
 
   /**
-   * initializes all fields, calling all interfaces constructor is used to quickly call objects.
-   * exception handling declared
+   * Initializes all fields, calling all interfaces. Constructor is used to quickly call objects.
+   * Exception handling declared.
    */
   public DateTimeController(
       IWorkDates workDates, IWorkHours workHours, Student student, DateTimeFormatter formatter) {
@@ -53,8 +53,8 @@ public class DateTimeController {
   }
 
   /**
-   * student's task date time and current date time output remaining or past date time output.
-   * exception handling declared
+   * Student's task date time and current date time output remaining or past date time output.
+   * Exception handling declared.
    */
   public void outPutTimeResult(
       IPrinterDatetime outPut, Student student, DateTimeFormatter formatter) {

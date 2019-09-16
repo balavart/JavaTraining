@@ -11,7 +11,6 @@ package ru.epam.balayan.tasksolution7.models.items;
  */
 public abstract class Item {
   private String className = getClass().getSimpleName();
-  private String gold = "\u001B[33m" + "gold" + "\u001B[0m"; // use yellow for text
   private String name;
   private Integer price;
 
@@ -23,6 +22,8 @@ public abstract class Item {
   /** override with format specifiers. */
   @Override
   public String toString() {
+    // use yellow for text
+    String gold = "\u001B[33m" + "gold" + "\u001B[0m";
     return String.format("%s %s sold for %d %s", className, name, price, gold);
   }
 }
