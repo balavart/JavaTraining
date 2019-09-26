@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 import ru.epam.balayan.tasksolution2.b.contract.Shootable;
-import ru.epam.balayan.tasksolution2.b.gunclasses.AK12;
-import ru.epam.balayan.tasksolution2.b.gunclasses.HK416;
+import ru.epam.balayan.tasksolution2.b.guns.AK12;
+import ru.epam.balayan.tasksolution2.b.guns.HK416;
 
 /**
  * this is a model class this class is used as an additional class for creating gun class objects

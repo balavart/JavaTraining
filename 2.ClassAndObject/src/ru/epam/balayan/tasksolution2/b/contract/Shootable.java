@@ -1,7 +1,7 @@
 package ru.epam.balayan.tasksolution2.b.contract;
 
-import ru.epam.balayan.tasksolution2.b.gunclasses.AK12;
-import ru.epam.balayan.tasksolution2.b.gunclasses.HK416;
+import ru.epam.balayan.tasksolution2.b.guns.AK12;
+import ru.epam.balayan.tasksolution2.b.guns.HK416;
 
 /**
  * this interface is contract between gun classes.

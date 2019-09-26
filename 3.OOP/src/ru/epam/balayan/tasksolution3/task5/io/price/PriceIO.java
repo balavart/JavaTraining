@@ -1,75 +1,19 @@
 package ru.epam.balayan.tasksolution3.task5.io.price;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
 
 /**
- * implementation with conditions price input and cars output.
+ * interface with operation for price input and cars output.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
- * @see IPriceIO implement
+ * @see SimplePriceIO implements
  */
-public class PriceIO implements IPriceIO {
-  private BufferedReader reader;
+public interface PriceIO {
 
-  public PriceIO(BufferedReader reader) {
-    this.reader = reader;
-  }
+  /** method displays cars in the user specified price consumption range. */
+  void displayCarsPriceRange(PassengerCar[] paramStation, int startNum, int finalNum);
 
-  @Override
-  public void displayCarsPriceRange(PassengerCar[] paramStation, int startPrice, int finalPrice) {
-    int carNumAvaible = 0;
-
-    System.out.println(
-        "Car list in the price range from " + startPrice + "$ to " + finalPrice + "$: ");
-
-    for (int i = 0; i < paramStation.length; i++) {
-      if ((startPrice <= paramStation[i].getPrice())
-          && (finalPrice >= paramStation[i].getPrice())) {
-        System.out.println(paramStation[i]);
-        carNumAvaible++;
-      }
-    }
-
-    System.out.println(carNumAvaible + " cars available" + "\n");
-  }
-
-  @Override
-  public int getUserPrice(int minPrice, int maxPrice) {
-    boolean digit = false;
-    String price = null;
-
-    System.out.println("Type starting and final prices: ");
-
-    while (!digit) {
-      try {
-        price = reader.readLine();
-
-        for (int i = 0; i < price.length(); i++) {
-          if (!Character.isDigit(price.charAt(i)) || price.isEmpty()) {
-            digit = false;
-            System.err.println("Type a number!");
-
-            break;
-          } else if ((Integer.parseInt(price) < minPrice) || (Integer.parseInt(price) > maxPrice)) {
-            digit = false;
-            System.err.println("Type price range from : " + minPrice + " to " + maxPrice);
-
-            break;
-          } else {
-            digit = true;
-
-            break;
-          }
-        }
-      } catch (NumberFormatException | IOException e) {
-        System.err.println("Type price range from: " + minPrice + " to " + maxPrice);
-      }
-    }
-
-    return Integer.parseInt(price);
-  }
+  /** get user specified price consumption. */
+  int getUserPrice(int minNum, int maxNum);
 }

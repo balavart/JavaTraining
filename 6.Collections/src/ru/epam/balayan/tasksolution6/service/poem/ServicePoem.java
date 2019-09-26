@@ -10,9 +10,9 @@ import java.util.List;
  * @author Vardan Balayan
  * @version 1.8
  * @created 14.09.2019
- * @see IServicePoem implement
+ * @see Poem implement
  */
-public class ServicePoem implements IServicePoem {
+public class ServicePoem implements Poem {
   private String poem;
 
   /** User pointing to file link. */

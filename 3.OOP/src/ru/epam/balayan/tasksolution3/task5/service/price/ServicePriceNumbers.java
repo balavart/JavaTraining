@@ -7,16 +7,16 @@ import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
- * @see IServicePriceNumbers implement
+ * @see PriceNumbers implement
  */
-public class ServicePriceNumbers implements IServicePriceNumbers {
+public class ServicePriceNumbers implements PriceNumbers {
   @Override
   public int getMaxPrice(PassengerCar[] station) {
     int max = station[0].getPrice();
 
-    for (int i = 0; i < station.length; i++) {
-      if (max < station[i].getPrice()) {
-        max = station[i].getPrice();
+    for (PassengerCar passengerCar : station) {
+      if (max < passengerCar.getPrice()) {
+        max = passengerCar.getPrice();
       }
     }
 
@@ -27,9 +27,9 @@ public class ServicePriceNumbers implements IServicePriceNumbers {
   public int getMinPrice(PassengerCar[] station) {
     int min = station[0].getPrice();
 
-    for (int i = 0; i < station.length; i++) {
-      if (min > station[i].getPrice()) {
-        min = station[i].getPrice();
+    for (PassengerCar passengerCar : station) {
+      if (min > passengerCar.getPrice()) {
+        min = passengerCar.getPrice();
       }
     }
 

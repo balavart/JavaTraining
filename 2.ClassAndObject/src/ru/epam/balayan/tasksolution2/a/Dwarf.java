@@ -8,8 +8,8 @@ package ru.epam.balayan.tasksolution2.a;
  * @version 1.8 creation date 8/22/2019
  */
 public class Dwarf implements Comparable {
-  private String personName = null;
-  private int strengthLevel = 0;
+  private String personName;
+  private int strengthLevel;
 
   public Dwarf(String personName, int strengthLevel) {
     this.personName = personName;
@@ -41,15 +41,11 @@ public class Dwarf implements Comparable {
 
     Dwarf other = (Dwarf) obj;
 
-    if (getPersonName() != other.getPersonName()) {
+    if (!getPersonName().equals(other.getPersonName())) {
       return false;
     }
 
-    if (getStrengthLevel() != other.getStrengthLevel()) {
-      return false;
-    }
-
-    return true;
+    return getStrengthLevel() == other.getStrengthLevel();
   }
 
   @Override

@@ -12,14 +12,12 @@ import ru.epam.balayan.tasksolution2.a.service.ServiceDwarf;
 class StartTaskSolution2A {
   public static void main(String[] args) {
     StartTaskSolution2A taskSolution2A = new StartTaskSolution2A();
-
     taskSolution2A.startApp();
   }
 
   /** method for quickly creating and executing objects. */
   private void startApp() {
     ServiceDwarf modelDwarf = new ServiceDwarf();
-
     modelDwarf.quivalentObjNum(modelDwarf.addDwarfArr());
     System.out.println();
     modelDwarf.objDisplay(modelDwarf.addDwarfArr());

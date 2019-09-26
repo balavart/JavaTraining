@@ -77,8 +77,8 @@ public class ServiceDwarf {
     System.out.println("The array of repeating objects: ");
 
     if (newDwarfArr.length != 0) {
-      for (int i = 0; i < newDwarfArr.length; i++) {
-        System.out.println("\"" + newDwarfArr[i] + "\"");
+      for (Dwarf dwarf : newDwarfArr) {
+        System.out.println("\"" + dwarf + "\"");
       }
     } else {
       System.out.println("No objects exist");

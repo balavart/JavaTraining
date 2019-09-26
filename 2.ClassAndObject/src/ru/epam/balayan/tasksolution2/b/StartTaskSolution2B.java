@@ -12,14 +12,12 @@ import ru.epam.balayan.tasksolution2.b.service.ServiceGun;
 class StartTaskSolution2B {
   public static void main(String[] args) {
     StartTaskSolution2B taskSolution2B = new StartTaskSolution2B();
-
     taskSolution2B.startApp();
   }
 
   /** method for quickly creating and executing objects. */
-  void startApp() {
+  private void startApp() {
     ServiceGun modelGun = new ServiceGun();
-
     modelGun.displayShootableArrArr();
   }
 }

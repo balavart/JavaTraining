@@ -3,24 +3,23 @@ package ru.epam.balayan.tasksolution3.task5;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-
 import ru.epam.balayan.tasksolution3.task5.controller.StationController;
-import ru.epam.balayan.tasksolution3.task5.io.fuelconsumption.FuelConsumptionIO;
-import ru.epam.balayan.tasksolution3.task5.io.fuelconsumption.IFuelConsumptionIO;
+import ru.epam.balayan.tasksolution3.task5.io.fuel.FuelConsumptionIO;
+import ru.epam.balayan.tasksolution3.task5.io.fuel.SimpleFuelConsumptionIO;
 import ru.epam.balayan.tasksolution3.task5.io.name.CarNameIO;
-import ru.epam.balayan.tasksolution3.task5.io.name.ICarNameIO;
-import ru.epam.balayan.tasksolution3.task5.io.price.IPriceIO;
+import ru.epam.balayan.tasksolution3.task5.io.name.SimpleCarNameIO;
 import ru.epam.balayan.tasksolution3.task5.io.price.PriceIO;
-import ru.epam.balayan.tasksolution3.task5.io.stationcars.IStationCarsOutput;
-import ru.epam.balayan.tasksolution3.task5.io.stationcars.StationCarsOutput;
-import ru.epam.balayan.tasksolution3.task5.io.stationcars.StationCarsSortedOutput;
-import ru.epam.balayan.tasksolution3.task5.io.stationcars.StationCarsTotalCostOutput;
-import ru.epam.balayan.tasksolution3.task5.service.fuelconsuption.IServiceFuelConsNumbers;
-import ru.epam.balayan.tasksolution3.task5.service.fuelconsuption.ServiceFuelConsNumbers;
-import ru.epam.balayan.tasksolution3.task5.service.price.IServicePriceNumbers;
+import ru.epam.balayan.tasksolution3.task5.io.price.SimplePriceIO;
+import ru.epam.balayan.tasksolution3.task5.io.station.SimpleStationCarsOutput;
+import ru.epam.balayan.tasksolution3.task5.io.station.SimpleStationCarsSortedOutput;
+import ru.epam.balayan.tasksolution3.task5.io.station.SimpleStationCarsTotalCostOutput;
+import ru.epam.balayan.tasksolution3.task5.io.station.StationCarsOutput;
+import ru.epam.balayan.tasksolution3.task5.service.fuel.FuelConsNumbers;
+import ru.epam.balayan.tasksolution3.task5.service.fuel.ServiceFuelConsNumbers;
+import ru.epam.balayan.tasksolution3.task5.service.price.PriceNumbers;
 import ru.epam.balayan.tasksolution3.task5.service.price.ServicePriceNumbers;
-import ru.epam.balayan.tasksolution3.task5.service.stationcars.IServiceStationCars;
 import ru.epam.balayan.tasksolution3.task5.service.stationcars.ServiceStationCars;
+import ru.epam.balayan.tasksolution3.task5.service.stationcars.StationCars;
 import ru.epam.balayan.tasksolution3.task5.station.TaxiStation;
 
 /**
@@ -47,17 +46,17 @@ class StartTaskSolution3 implements AutoCloseable {
 
   /** method for quickly creating and executing objects. */
   private void startApp(BufferedReader reader) {
-    IServiceStationCars stationCars = new ServiceStationCars();
+    StationCars stationCars = new ServiceStationCars();
     StationController stationController = new StationController();
     TaxiStation station = new TaxiStation(stationController.getCollectedCars(stationCars));
-    IStationCarsOutput carsTotalCost = new StationCarsTotalCostOutput();
-    IStationCarsOutput carsOutput = new StationCarsOutput();
-    IStationCarsOutput sortedCarsOutput = new StationCarsSortedOutput();
-    ICarNameIO carNameIO = new CarNameIO(reader);
-    IPriceIO priceIO = new PriceIO(reader);
-    IServicePriceNumbers priceNumbers = new ServicePriceNumbers();
-    IFuelConsumptionIO fuelConsumptionIO = new FuelConsumptionIO(reader);
-    IServiceFuelConsNumbers fuelConsNumbers = new ServiceFuelConsNumbers();
+    StationCarsOutput carsTotalCost = new SimpleStationCarsTotalCostOutput();
+    StationCarsOutput carsOutput = new SimpleStationCarsOutput();
+    StationCarsOutput sortedCarsOutput = new SimpleStationCarsSortedOutput();
+    CarNameIO carNameIO = new SimpleCarNameIO(reader);
+    PriceIO priceIO = new SimplePriceIO(reader);
+    PriceNumbers priceNumbers = new ServicePriceNumbers();
+    FuelConsumptionIO fuelConsumptionIO = new SimpleFuelConsumptionIO(reader);
+    FuelConsNumbers fuelConsNumbers = new ServiceFuelConsNumbers();
 
     stationController.resultCars(station.getStation(), carsTotalCost, carsOutput, sortedCarsOutput);
 

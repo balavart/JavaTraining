@@ -1,15 +1,17 @@
 package ru.epam.balayan.tasksolution6;
 
-import ru.epam.balayan.tasksolution6.service.correctparentheses.IServiceCorrectParentheses;
-import ru.epam.balayan.tasksolution6.service.correctparentheses.ServiceCorrectParentheses;
-import ru.epam.balayan.tasksolution6.service.directoryfiles.IServiceDirectoryFiles;
-import ru.epam.balayan.tasksolution6.service.directoryfiles.ServiceDirectoryFiles;
-import ru.epam.balayan.tasksolution6.service.fileio.IServiceStrFileReverse;
+import ru.epam.balayan.tasksolution6.service.directories.DirectoryFiles;
+
+import ru.epam.balayan.tasksolution6.service.directories.ServiceDirectoryFiles;
+
 import ru.epam.balayan.tasksolution6.service.fileio.ServiceStrFileReverse;
-import ru.epam.balayan.tasksolution6.service.poem.IServicePoem;
+import ru.epam.balayan.tasksolution6.service.fileio.SimpleServiceStrFileReverse;
+import ru.epam.balayan.tasksolution6.service.parentheses.CorrectParentheses;
+import ru.epam.balayan.tasksolution6.service.parentheses.ServiceCorrectParentheses;
+import ru.epam.balayan.tasksolution6.service.poem.Poem;
 import ru.epam.balayan.tasksolution6.service.poem.ServicePoem;
-import ru.epam.balayan.tasksolution6.service.worddifference.IServiceWordDifference;
-import ru.epam.balayan.tasksolution6.service.worddifference.ServiceWordDifference;
+import ru.epam.balayan.tasksolution6.service.words.ServiceWordDifference;
+import ru.epam.balayan.tasksolution6.service.words.WordDifference;
 
 /**
  * This app is a solution for EPAM Java Training homework № 6. This is main class with service
@@ -20,22 +22,22 @@ import ru.epam.balayan.tasksolution6.service.worddifference.ServiceWordDifferenc
  * @created 12.09.2019
  */
 public class StartTaskSolutions6 {
-  private IServiceStrFileReverse strFileReverse =
-      new ServiceStrFileReverse(
+  private ServiceStrFileReverse strFileReverse =
+      new SimpleServiceStrFileReverse(
           "6.Collections\\src\\ru\\epam\\balayan\\tasksolution6\\service\\fileio\\file.txt",
           "6.Collections\\src\\ru\\epam\\balayan\\tasksolution6\\service\\fileio\\outFile.txt");
-  private IServiceDirectoryFiles directoryFiles =
+  private DirectoryFiles directoryFiles =
       new ServiceDirectoryFiles(
-          "6.Collections\\src\\ru\\epam\\balayan"
-              + "\\tasksolution6\\service\\directoryfiles\\catalog1");
-  private IServicePoem servicePoem =
+          "6.Collections\\src\\ru\\epam\\balayan\\"
+              + "tasksolution6\\service\\directories\\catalog1");
+  private Poem servicePoem =
       new ServicePoem(
           "Jack-O-Lanterns\n" + "Smiling bright\n" + "Wishing you\n" + "A haunting night!");
-  private IServiceCorrectParentheses correctParentheses = new ServiceCorrectParentheses("()[]{}");
-  private IServiceWordDifference wordDifference =
+  private CorrectParentheses correctParentheses = new ServiceCorrectParentheses("()[]{}");
+  private WordDifference wordDifference =
       new ServiceWordDifference(
-          "6.Collections\\src\\ru\\epam\\balayan"
-              + "\\tasksolution6\\service\\worddifference\\englishText.txt");
+          "6.Collections\\src\\ru\\epam\\balayan\\"
+              + "tasksolution6\\service\\words\\englishText.txt");
 
   /** calling service methods. */
   public static void main(String[] args) {

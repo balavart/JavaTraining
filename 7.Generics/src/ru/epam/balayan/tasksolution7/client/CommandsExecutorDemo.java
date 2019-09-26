@@ -4,7 +4,7 @@ import ru.epam.balayan.tasksolution7.commands.Executable;
 import ru.epam.balayan.tasksolution7.commands.SellPotionCommand;
 import ru.epam.balayan.tasksolution7.commands.SellWeaponCommand;
 import ru.epam.balayan.tasksolution7.executor.Executor;
-import ru.epam.balayan.tasksolution7.executor.IExecutor;
+import ru.epam.balayan.tasksolution7.executor.SimpleExecutor;
 
 /**
  * The Client class.
@@ -14,10 +14,11 @@ import ru.epam.balayan.tasksolution7.executor.IExecutor;
  * @created 09.09.2019
  */
 public class CommandsExecutorDemo {
+
   private Executable sellPotionCommand = new SellPotionCommand();
   private Executable sellWeaponCommand = new SellWeaponCommand();
 
-  private IExecutor executor = new Executor();
+  private Executor executor = new SimpleExecutor();
 
   public void outPutExecutorWork() {
     System.out.println(executor.execute(sellPotionCommand));

@@ -1,14 +1,13 @@
 package ru.epam.balayan.tasksolution5;
 
 import java.time.format.DateTimeFormatter;
-
 import ru.epam.balayan.tasksolution5.controller.DateTimeController;
-import ru.epam.balayan.tasksolution5.dates.IWorkDates;
+import ru.epam.balayan.tasksolution5.dates.SimpleWorkDates;
 import ru.epam.balayan.tasksolution5.dates.WorkDates;
-import ru.epam.balayan.tasksolution5.hours.IWorkHours;
+import ru.epam.balayan.tasksolution5.hours.SimpleWorkHours;
 import ru.epam.balayan.tasksolution5.hours.WorkHours;
-import ru.epam.balayan.tasksolution5.printer.IPrinterDatetime;
 import ru.epam.balayan.tasksolution5.printer.OutPutStudentTime;
+import ru.epam.balayan.tasksolution5.printer.PrinterDatetime;
 import ru.epam.balayan.tasksolution5.students.Student;
 
 /**
@@ -30,9 +29,9 @@ public class StartTaskSolution5 {
         new Student("Ivan Ivanov", "J2EE Developer", "27.08.2019 20:33", new short[] {16, 24});
     Student petrov =
         new Student("Petr Petrov", "Java Developer", "27.08.2019 20:33", new short[] {8, 16, 16});
-    IWorkDates workDates = new WorkDates();
-    IWorkHours workHours = new WorkHours();
-    IPrinterDatetime outPutResult = new OutPutStudentTime();
+    WorkDates workDates = new SimpleWorkDates();
+    WorkHours workHours = new SimpleWorkHours();
+    PrinterDatetime outPutResult = new OutPutStudentTime();
     DateTimeController ivanovTime = new DateTimeController(workDates, workHours, ivanov, formatter);
 
     ivanovTime.outPutTimeResult(outPutResult, ivanov, formatter);

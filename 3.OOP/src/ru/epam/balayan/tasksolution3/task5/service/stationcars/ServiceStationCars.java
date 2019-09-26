@@ -18,9 +18,9 @@ import ru.epam.balayan.tasksolution3.task5.cars.sedan.ToyotaCorolla;
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/26/2019
- * @see IServiceStationCars implement
+ * @see StationCars implement
  */
-public class ServiceStationCars implements IServiceStationCars {
+public class ServiceStationCars implements StationCars {
 
   /** method add an randomly filled object array. */
   @Override

@@ -3,9 +3,9 @@ package ru.epam.balayan.tasksolution4.controller;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import ru.epam.balayan.tasksolution4.dates.IWorkDates;
-import ru.epam.balayan.tasksolution4.hours.IWorkHours;
-import ru.epam.balayan.tasksolution4.printer.IPrinterDatetime;
+import ru.epam.balayan.tasksolution4.dates.WorkDates;
+import ru.epam.balayan.tasksolution4.hours.WorkHours;
+import ru.epam.balayan.tasksolution4.printer.PrinterDatetime;
 import ru.epam.balayan.tasksolution4.students.Student;
 
 /**
@@ -24,7 +24,7 @@ public class DateTimeController {
 
   /** initializes all fields, calling all interfaces constructor is used to quickly call objects. */
   public DateTimeController(
-      IWorkDates workDates, IWorkHours workHours, Student student, DateTimeFormatter formatter) {
+      WorkDates workDates, WorkHours workHours, Student student, DateTimeFormatter formatter) {
     this.startDate = workDates.getStartDate(student.getTaskDate(), formatter);
     this.endDate = workDates.getEndDate();
     this.fullWorkDaysHours = workHours.getFullWorkDaysHours(startDate, endDate);
@@ -37,7 +37,7 @@ public class DateTimeController {
 
   /** student's task date time and current date time output remaining or past date time output. */
   public void outPutTimeResult(
-      IPrinterDatetime outPut, Student student, DateTimeFormatter formatter) {
+      PrinterDatetime outPut, Student student, DateTimeFormatter formatter) {
     outPut.outPutDatetimeResult(balanceHours, student.getName(), student.getCurricullum());
     outPut.outPutDates(startDate, endDate, formatter);
   }

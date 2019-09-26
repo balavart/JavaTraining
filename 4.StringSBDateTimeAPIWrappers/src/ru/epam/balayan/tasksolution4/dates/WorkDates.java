@@ -4,27 +4,17 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * implementation with conditions the starting and final dates.
+ * interface for getting starting and final dates.
  *
  * @author Balayan Vardan
  * @version 1.8 creation date 8/31/2019
- * @see IWorkDates implement
+ * @see SimpleWorkDates implements
  */
-public class WorkDates implements IWorkDates {
-  @Override
-  public LocalDateTime getEndDate() {
-    LocalDateTime endDate = LocalDateTime.now();
+public interface WorkDates {
 
-    return endDate;
-  }
+  /** get current date. */
+  LocalDateTime getEndDate();
 
-  @Override
-  public LocalDateTime getStartDate(String taskDate, DateTimeFormatter formatter) {
-    DateTimeFormatter formatRus = formatter;
-    LocalDateTime startDate;
-
-    startDate = LocalDateTime.parse(taskDate, formatRus);
-
-    return startDate;
-  }
+  /** get the start formatted date of the student task. */
+  LocalDateTime getStartDate(String taskDate, DateTimeFormatter formatter);
 }

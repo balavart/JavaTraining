@@ -1,13 +1,13 @@
 package ru.epam.balayan.tasksolution3.task5.controller;
 
 import ru.epam.balayan.tasksolution3.task5.cars.contract.PassengerCar;
-import ru.epam.balayan.tasksolution3.task5.io.fuelconsumption.IFuelConsumptionIO;
-import ru.epam.balayan.tasksolution3.task5.io.name.ICarNameIO;
-import ru.epam.balayan.tasksolution3.task5.io.price.IPriceIO;
-import ru.epam.balayan.tasksolution3.task5.io.stationcars.IStationCarsOutput;
-import ru.epam.balayan.tasksolution3.task5.service.fuelconsuption.IServiceFuelConsNumbers;
-import ru.epam.balayan.tasksolution3.task5.service.price.IServicePriceNumbers;
-import ru.epam.balayan.tasksolution3.task5.service.stationcars.IServiceStationCars;
+import ru.epam.balayan.tasksolution3.task5.io.fuel.FuelConsumptionIO;
+import ru.epam.balayan.tasksolution3.task5.io.name.CarNameIO;
+import ru.epam.balayan.tasksolution3.task5.io.price.PriceIO;
+import ru.epam.balayan.tasksolution3.task5.io.station.StationCarsOutput;
+import ru.epam.balayan.tasksolution3.task5.service.fuel.FuelConsNumbers;
+import ru.epam.balayan.tasksolution3.task5.service.price.PriceNumbers;
+import ru.epam.balayan.tasksolution3.task5.service.stationcars.StationCars;
 
 /**
  * this class is a controller between interfaces.
@@ -33,9 +33,9 @@ public class StationController {
    * initializes the field by calling the interface with operation for car name input and cars
    * output.
    *
-   * @see ICarNameIO
+   * @see CarNameIO
    */
-  public StationController(ICarNameIO io) {
+  public StationController(CarNameIO io) {
     this.userCarName = io.getUserCarName();
   }
 
@@ -43,11 +43,11 @@ public class StationController {
    * initializes the fields by calling the interface with operation for fuel input and cars output.
    * initializes the fields by calling the interface for getting fuel consumption numbers.
    *
-   * @see IFuelConsumptionIO
-   * @see IServiceFuelConsNumbers
+   * @see FuelConsumptionIO
+   * @see FuelConsNumbers
    */
   public StationController(
-      PassengerCar[] station, IFuelConsumptionIO io, IServiceFuelConsNumbers numbers) {
+      PassengerCar[] station, FuelConsumptionIO io, FuelConsNumbers numbers) {
     this.minFuelCons = numbers.getMinFuelConsumption(station);
     this.maxFuelCons = numbers.getMaxFuelConsumption(station);
     this.startUserFuelConsNum = io.getUserFuelConsumption(station, minFuelCons, maxFuelCons);
@@ -58,10 +58,10 @@ public class StationController {
    * initializes the fields by calling the interface with operation for price input and cars output.
    * initializes the fields by calling the interface for getting price numbers.
    *
-   * @see IPriceIO
-   * @see IServicePriceNumbers
+   * @see PriceIO
+   * @see PriceNumbers
    */
-  public StationController(PassengerCar[] station, IPriceIO io, IServicePriceNumbers numbers) {
+  public StationController(PassengerCar[] station, PriceIO io, PriceNumbers numbers) {
     this.minPrice = numbers.getMinPrice(station);
     this.maxPrice = numbers.getMaxPrice(station);
     this.startUserPriceNumber = io.getUserPrice(minPrice, maxPrice);
@@ -71,11 +71,11 @@ public class StationController {
   /** initializes all fields, calling all interfaces constructor is used to quickly call objects. */
   public StationController(
       PassengerCar[] station,
-      ICarNameIO carNameIO,
-      IPriceIO priceIO,
-      IServicePriceNumbers priceNumbers,
-      IFuelConsumptionIO fuelConsumptionIO,
-      IServiceFuelConsNumbers fuelConsNumbers) {
+      CarNameIO carNameIO,
+      PriceIO priceIO,
+      PriceNumbers priceNumbers,
+      FuelConsumptionIO fuelConsumptionIO,
+      FuelConsNumbers fuelConsNumbers) {
     this.userCarName = carNameIO.getUserCarName();
     this.minPrice = priceNumbers.getMinPrice(station);
     this.maxPrice = priceNumbers.getMaxPrice(station);
@@ -92,43 +92,43 @@ public class StationController {
   /** display cars. */
   public void resultCars(
       PassengerCar[] station,
-      IStationCarsOutput totalCost,
-      IStationCarsOutput cars,
-      IStationCarsOutput sortedCars) {
+      StationCarsOutput totalCost,
+      StationCarsOutput cars,
+      StationCarsOutput sortedCars) {
     totalCost.displayStationCars(station);
     cars.displayStationCars(station);
     sortedCars.displayStationCars(station);
   }
 
-  public void resultCarsName(PassengerCar[] station, ICarNameIO io) {
+  public void resultCarsName(PassengerCar[] station, CarNameIO io) {
     io.displayCarsName(station, userCarName);
   }
 
   /** display cars in price range. */
-  public void resultCarsPriceRange(PassengerCar[] station, IPriceIO io) {
+  public void resultCarsPriceRange(PassengerCar[] station, PriceIO io) {
     io.displayCarsPriceRange(station, startUserPriceNumber, finalUserPriceNumber);
   }
 
   /** display car names, cars in price range, cars in fuel cons range. */
   public void resultFilter(
       PassengerCar[] station,
-      ICarNameIO carsNameIO,
-      IPriceIO priceIO,
-      IFuelConsumptionIO fuelConsIO) {
+      CarNameIO carsNameIO,
+      PriceIO priceIO,
+      FuelConsumptionIO fuelConsIO) {
     carsNameIO.displayCarsName(station, userCarName);
     priceIO.displayCarsPriceRange(station, startUserPriceNumber, finalUserPriceNumber);
     fuelConsIO.displayFuelConsumptionRange(station, startUserFuelConsNum, finalUserFuelConsNum);
   }
 
-  public void resultFuelConsumptionRange(PassengerCar[] station, IFuelConsumptionIO io) {
+  public void resultFuelConsumptionRange(PassengerCar[] station, FuelConsumptionIO io) {
     io.displayFuelConsumptionRange(station, startUserFuelConsNum, finalUserFuelConsNum);
   }
 
-  public void resultStationCars(PassengerCar[] station, IStationCarsOutput output) {
+  public void resultStationCars(PassengerCar[] station, StationCarsOutput output) {
     output.displayStationCars(station);
   }
 
-  public PassengerCar[] getCollectedCars(IServiceStationCars stationCars) {
+  public PassengerCar[] getCollectedCars(StationCars stationCars) {
     return stationCars.getCollectedCars();
   }
 }
